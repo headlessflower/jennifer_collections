@@ -9,7 +9,7 @@
     <div class="flex flex-col md:flex-row md:space-x-8">
 
       <div class="services-images grid md:grid-cols-2 w-1/2 gap-4">
-        <NuxtImg src="/archives-1.webp" sizes="sm:100vw md:25vw">
+        <NuxtImg src="/archives-1.webp" alt="woman archiving  old film" sizes="sm:100vw md:25vw">
         </NuxtImg>
         <NuxtImg src="/archives-2.webp" sizes="sm:100vw md:25vw">
         </NuxtImg>
