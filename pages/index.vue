@@ -1,9 +1,7 @@
-<script setup>
-
-</script>
+<script setup></script>
 <template>
-  <div>
-    <AppHero />
-    <AppServices />
-  </div>
+    <div>
+        <AppHero />
+        <AppServices />
+    </div>
 </template>

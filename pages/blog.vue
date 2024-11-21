@@ -10,9 +10,10 @@
       <nav class="w-64 bg-gray-200 p-6 sticky top-0 h-screen hidden md:block">
         <ul>
           <li class="mb-4">
-            <a href="/blog/preventive-conservation-guide" class="text-gray-800 hover:text-gray-600">Preventative
+            <NuxtLink to="/blog/preventive-conservation-guide" class="text-gray-800
+              hover:text-gray-600">Preventative
               Conservation
-              Guide</a>
+              Guide</NuxtLink>
           </li>
           <li class="mb-4">
             <a href="#" class="text-gray-800 hover:text-gray-600">About Me</a>
