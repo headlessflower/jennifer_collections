@@ -14,7 +14,7 @@
         the services I offer. Let me help you address your museum’s
         collections needs!
       </p>
-      <AppButton text="Learn More" link="/services" />
+      <AppButton text="Learn More" link="/about" />
     </div>
     <div class="grid place-items-center">
       <img src="/archives-hero.webp" alt="Young woman at a table with artifacts" class="w-3/4" />
