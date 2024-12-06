@@ -13,7 +13,7 @@
 
         <img src="/archives-3.webp" alt="woman archiving  old film" sizes="sm:100vw md:25vw" />
 
-        <img src="/archives-4.webp" alt="woman archiving  old film" sizes="sm:100vw md:25vw" />
+        <img src="/jenny_exp_3.webp" alt="woman archiving  old film" sizes="sm:100vw md:25vw" />
       </div>
       <div class="services-description">
         <ul class="flex flex-col space-y-8 mb-12">

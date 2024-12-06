@@ -7,8 +7,14 @@
         <div>
           <strong class="text-3xl ">Registration</strong>
           <ul class="space-y-6 mt-6">
-            With experience as both a permanent collections and
-            loans and exhibitions Registrar, I offer:
+
+            <li class="font-bold text-xl">
+
+              With experience as both a permanent collections and
+              loans and exhibitions Registrar, I offer:
+
+
+            </li>
             <li>
               Strategic planning and task prioritization for
               collections goals.
@@ -35,8 +41,13 @@
         <img src="/archives-2.webp" class="w-1/3" />
         <div>
           <strong class="text-3xl">Database Management</strong>
-          <ul>
-            Struggling with dirty, inconsistent data?
+          <ul class="space-y-6 mt-6">
+
+            <li class="font-bold text-xl">
+
+              Struggling with dirty, inconsistent data?
+
+            </li>
             <li>Best data capture practices</li>
             <li>
               Explore databas customization capabitlites taht can
@@ -53,15 +64,20 @@
       <div class="grid grid-cols-2 items-center">
         <div>
           <strong class="text-3xl">Collections Inventory</strong>
-          <ul>
-            Inventory tracking services include:
+          <ul class="space-y-6 mt-6">
+            <li class="font-bold text-xl">
+              Inventory tracking services include:
+
+
+            </li>
+
             <li>
               Proper intake methods, timely database tracking,
               regular random sampling and periodic full
               inventories
             </li>
             <li>
-              Full reviews of current invoentory status and
+              Full reviews of current inventory status and
               cataloging needs
             </li>
             <li>
@@ -81,10 +97,14 @@
         <img src="/archives-2.webp" class="w-1/3" />
         <div>
           <strong class="text-3xl">Archival Storage Solutions</strong>
-          <ul>
-            Maximizing use of storage space while ensuring archival
-            practices is essential to the long-term preservation of
-            collections. Services include:
+          <ul class="space-y-6 mt-6">
+            <li class="font-bold text-xl">
+              Maximizing use of storage space while ensuring archival
+              practices is essential to the long-term preservation of
+              collections. Services include:
+
+
+            </li>
             <li>
               Storage assessment to determine rehousing or
               expansion needs.

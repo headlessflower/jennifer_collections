@@ -17,7 +17,7 @@
       <AppButton text="Learn More" link="/about" />
     </div>
     <div class="grid place-items-center">
-      <img src="/archives-hero.webp" alt="Young woman at a table with artifacts" class="w-3/4" />
+      <img src="/jenny_exp_1.webp" alt="Young woman at a table with artifacts" class="w-3/4" />
     </div>
   </div>
 </template>
