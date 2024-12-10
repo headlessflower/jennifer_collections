@@ -2,8 +2,8 @@
 <template>
   <div class="flex flex-col space-y-8 md:p-8">
     <h1 class="text-5xl font-bold">Collections Care Services</h1>
-    <div>
-      <div class="grid grid-cols-2 items-center py-16">
+    <div class="px-2">
+      <div class="grid md:grid-cols-2 items-center py-16">
         <div>
           <strong class="text-3xl ">Registration</strong>
           <ul class="space-y-6 mt-6">
@@ -34,11 +34,11 @@
             </li>
           </ul>
         </div>
-        <img src="/archives-2.webp" class="w-1/3" />
+        <img src="/archives-2.webp" class="md:w-1/3" />
       </div>
 
-      <div class="grid grid-cols-2 items-center">
-        <img src="/archives-2.webp" class="w-1/3" />
+      <div class="grid md:grid-cols-2 items-center">
+        <img src="/archives-2.webp" class="hidden md:block md:w-1/3" />
         <div>
           <strong class="text-3xl">Database Management</strong>
           <ul class="space-y-6 mt-6">
@@ -61,7 +61,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 items-center">
+      <div class="grid md:grid-cols-2 items-center">
         <div>
           <strong class="text-3xl">Collections Inventory</strong>
           <ul class="space-y-6 mt-6">
@@ -90,11 +90,11 @@
             </li>
           </ul>
         </div>
-        <img src="/archives-2.webp" class="w-1/3" />
+        <img src="/archives-2.webp" class=" hidden md:block md:w-1/3" />
       </div>
 
-      <div class="grid grid-cols-2 items-center">
-        <img src="/archives-2.webp" class="w-1/3" />
+      <div class="grid md:grid-cols-2 items-center">
+        <img src="/archives-2.webp" class="md:w-1/3" />
         <div>
           <strong class="text-3xl">Archival Storage Solutions</strong>
           <ul class="space-y-6 mt-6">
