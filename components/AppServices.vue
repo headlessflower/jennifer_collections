@@ -7,13 +7,13 @@
 
     <div class="flex flex-col md:flex-row md:space-x-8">
       <div class="services-images grid md:grid-cols-2 md:w-1/2 gap-4">
-        <img src="/archives-1.webp" alt="woman archiving  old film" sizes="sm:100vw md:25vw" class="" />
+        <img src="/archives-1.webp" alt="woman archiving  old film" sizes="sm:100vw md:25vw" class="hidden md:block" />
 
-        <img src="/archives-2.webp" alt="woman archiving  old film" sizes="sm:100vw md:25vw" />
+        <img src="/archives-2.webp" alt="woman archiving  old film" sizes="sm:100vw md:25vw" class="hidden md:block" />
 
-        <img src="/archives-3.webp" alt="woman archiving  old film" sizes="sm:100vw md:25vw" />
+        <img src="/archives-3.webp" alt="woman archiving  old film" sizes="sm:100vw md:25vw" class="hidden md:block" />
 
-        <img src="/jenny_exp_3.webp" alt="woman archiving  old film" sizes="sm:100vw md:25vw" />
+        <img src="/jenny_exp_3.webp" alt="woman archiving  old film" sizes="sm:100vw md:25vw" class="hidden md:block" />
       </div>
       <div class="services-description">
         <ul class="flex flex-col space-y-8 mb-12">

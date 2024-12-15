@@ -12,9 +12,9 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
-  siteConfig: {
-    title: 'Jennifer Payan: Collections Care and Registration Professional Services',
-    description: 'document, transport, and care for a variety of collections including archaeological and cultural resource material, natural history specimens, and fine art',
-    url: 'https://jenniferpayan.info'
-  }
+  site: {
+    url: 'https://jenniferpayan.info',
+    name: 'Jennifer Payan: Registration and Collections Care Professional',
+    // ...etc
+  },
 });
