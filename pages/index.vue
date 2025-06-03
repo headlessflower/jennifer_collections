@@ -2,6 +2,8 @@
 <template>
     <div>
         <AppHero />
+<About/>
         <AppServices />
+      <Experience/>
     </div>
 </template>

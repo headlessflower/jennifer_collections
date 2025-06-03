@@ -9,6 +9,10 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/seo",
   ],
+  tailwindcss: {
+    exposeConfig: true,
+    viewer: true,
+  },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
