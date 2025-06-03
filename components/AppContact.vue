@@ -27,36 +27,10 @@ function handleSubmit() {
 
           <!-- Contact Details -->
           <div class="space-y-4">
-            <div class="flex items-start space-x-3">
-              <!-- Location Icon (replace with your preferred SVG) -->
-              <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 text-cream flex-shrink-0 mt-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-              >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17.657 16.657L13.414 20.9a1 1 0 01-1.414 0l-4.243-4.243a8 8 0 1111.314 0z"
-                />
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-              <p class="text-base">
-                3601 Hayden Avenue, Suite 100<br />
-                Culver City, CA 90232
-              </p>
-            </div>
+
 
             <div class="flex items-center space-x-3">
-              <!-- Phone Icon (replace with your preferred SVG) -->
+              <!-- Phone Icon  -->
               <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6 text-cream flex-shrink-0"
@@ -75,7 +49,7 @@ function handleSubmit() {
             </div>
 
             <div class="flex items-center space-x-3">
-              <!-- Email Icon (replace with your preferred SVG) -->
+              <!-- Email Icon  -->
               <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6 text-cream flex-shrink-0"

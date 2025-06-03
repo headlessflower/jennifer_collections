@@ -5,7 +5,7 @@
       <!-- Section Title -->
       <div class="text-center mb-12">
         <h2 class="text-4xl md:text-5xl font-bold inline-block">
-          What I do
+         Services
           <span class="block w-24 h-1 bg-yellow-400 mt-2 mx-auto"></span>
         </h2>
       </div>

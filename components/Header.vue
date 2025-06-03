@@ -14,7 +14,7 @@ const isOpen = ref(false)
         <li><NuxtLink to="/" class="hover:underline">Home</NuxtLink></li>
         <li><NuxtLink to="/about" class="hover:underline">About Me</NuxtLink></li>
         <li><NuxtLink to="/collections" class="hover:underline">Collections</NuxtLink></li>
-        <li><NuxtLink to="/services" class="hover:underline">Experience</NuxtLink></li>
+        <li><NuxtLink to="/services" class="hover:underline">Services</NuxtLink></li>
       </ul>
 
       <!-- Mobile Menu Toggle -->
@@ -47,8 +47,9 @@ const isOpen = ref(false)
           <ul class="flex flex-col items-center py-4 space-y-4">
             <li><NuxtLink @click="isOpen = false" to="/" class="text-indigo-900 hover:underline">Home</NuxtLink></li>
             <li><NuxtLink @click="isOpen = false" to="/about" class="text-indigo-900 hover:underline">About Me</NuxtLink></li>
-            <li><NuxtLink @click="isOpen = false" to="/services" class="text-indigo-900 hover:underline">Work</NuxtLink></li>
             <li><NuxtLink @click="isOpen = false" to="/collections" class="text-indigo-900 hover:underline">Collections</NuxtLink></li>
+            <li><NuxtLink @click="isOpen = false" to="/services" class="text-indigo-900 hover:underline">Services</NuxtLink></li>
+
             <li>
               <button
                   @click="isOpen = false"
