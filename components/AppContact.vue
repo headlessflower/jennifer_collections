@@ -45,7 +45,7 @@ function handleSubmit() {
                     d="M3 8l7.89 7.89a5 5 0 007.07 0L21 11m-9-2V3m0 0L7 7m4-4l4 4"
                 />
               </svg>
-              <p class="text-base">(310) 555-1234</p>
+              <p class="text-base">(323) 270-7263</p>
             </div>
 
             <div class="flex items-center space-x-3">
@@ -64,7 +64,7 @@ function handleSubmit() {
                     d="M16 12l-4-4m0 0l-4 4m4-4v12"
                 />
               </svg>
-              <p class="text-base">j.payan@academymuseum.org</p>
+              <p class="text-base">payanjennifer9@gmail.com</p>
             </div>
           </div>
 
