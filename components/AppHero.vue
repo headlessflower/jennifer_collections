@@ -33,7 +33,7 @@
       </p>
       <!-- Social Icons  -->
       <div class="social-icons flex space-x-6 mt-6">
-        <a href="#" aria-label="LinkedIn" class="icon text-terracotta hover:text-burnt-hover font-medium">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/jennifer-payan" aria-label="LinkedIn" class="icon text-terracotta hover:text-burnt-hover font-medium">LinkedIn</a>
 
       </div>
     </div>

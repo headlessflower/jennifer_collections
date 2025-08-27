@@ -55,7 +55,7 @@
           <!-- Download CV Button -->
           <div class="mt-8">
             <a
-                href="/PayanJ_Resume_2025.pdf"
+                href="/payanjresume2025.pdf"
                 target="_blank"
                 class="inline-block bg-burnt text-white hover:bg-burnt-hover transition-colors px-6 py-3 rounded-full font-medium"
                 download=""
@@ -68,7 +68,7 @@
         <!-- Image Content -->
         <div class="bio-image flex justify-center">
           <div class="w-full max-w-md rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-            <img src="/jenny_exp_1.webp" alt="Jennifer Payan Portrait" class="w-full h-auto object-cover" />
+            <img src="/ellsworth-3.png" alt="Jennifer Payan Portrait" class="w-full h-auto object-cover" />
           </div>
         </div>
       </div>

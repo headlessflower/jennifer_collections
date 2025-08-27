@@ -34,11 +34,11 @@
             </li>
           </ul>
         </div>
-        <img src="/archives-2.webp" class="md:w-1/3" />
+        <img src="/ellsworth-1.png" class="md:w-2/3" />
       </div>
 
       <div class="grid md:grid-cols-2 items-center">
-        <img src="/archives-2.webp" class="hidden md:block md:w-1/3" />
+        <img src="/ellsworth-5.png" class="hidden md:block md:w-2/3" />
         <div>
           <strong class="text-3xl">Database Management</strong>
           <ul class="space-y-6 mt-6">
@@ -90,11 +90,11 @@
             </li>
           </ul>
         </div>
-        <img src="/archives-2.webp" class=" hidden md:block md:w-1/3" />
+        <img src="/ellsworth-2.png" class=" hidden md:block md:w-2/3" />
       </div>
 
       <div class="grid md:grid-cols-2 items-center">
-        <img src="/archives-2.webp" class="md:w-1/3" />
+        <img src="/ellsworth-3.png" class="md:w-2/3" />
         <div>
           <strong class="text-3xl">Archival Storage Solutions</strong>
           <ul class="space-y-6 mt-6">
