@@ -12,7 +12,7 @@
     <div class="hero-center flex-1 relative flex flex-col items-center p-2">
       <!-- Placeholder for hero image -->
       <div class="image-wrapper rounded-full overflow-hidden w-64 h-80 md:w-80 md:h-96 transition-shadow duration-300 hover:shadow-2xl">
-        <img src="/headshot_2.webp" alt="Jennifer Payan" class="hero-image w-full h-full object-cover" />
+        <img src="/profile-pic-1.JPEG" alt="Jennifer Payan" class="hero-image w-full h-full object-cover" />
       </div>
 
     </div>

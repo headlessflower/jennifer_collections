@@ -1,75 +1,98 @@
-<script setup></script>
+
 <template>
-  <section class="services-section bg-cream text-indigo-900 py-16">
-    <div class="container mx-auto px-6 md:px-12">
-      <!-- Section Title -->
-      <div class="text-center mb-12">
-        <h2 class="text-4xl md:text-5xl font-bold inline-block">
-         Services
-          <span class="block w-24 h-1 bg-yellow-400 mt-2 mx-auto"></span>
+  <section class="w-full">
+    <!-- Header -->
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
+      <header class="mb-10 text-center">
+        <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">
+          Professional Services
         </h2>
+        <p class="mt-3 text-base/7 sm:text-lg/8 opacity-80">
+          Clear, reliable support across collections management, archival research, and digital preservation.
+        </p>
+      </header>
+
+      <!-- Quick CTAs -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
+        <NuxtLink
+          to="/services"
+          class="inline-flex items-center justify-center border border-burnt hover:bg-burnt rounded-2xl px-5 py-3 text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition"
+        >
+          Explore All Services
+        </NuxtLink>
+        <NuxtLink
+          to="/contact"
+          class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-medium border hover:border-burnt border-foreground/15 hover:border-foreground/30 hover:shadow-sm transition"
+        >
+          Request a Quote
+        </NuxtLink>
       </div>
 
       <!-- Services Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Collections Management Card -->
-        <div class="service-card flex flex-col items-center text-center px-6 py-8">
-          <!-- Icon Placeholder -->
-          <div class="bg-terracotta p-4 rounded-lg mb-4">
-            <!-- Replace with actual SVG icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7H3v12a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-semibold mb-4">Collections Management</h3>
-          <p class="text-base text-gray-700 mb-6">
-            Oversee database management systems like ArchivesSpace, Mimsy XG, and TMS for accessioning,
-            barcoding, rehousing, and maintaining archival collections to ensure accurate tracking and preservation.
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <!-- Collections Management -->
+        <article class="group rounded-2xl border border-foreground/10 p-6 shadow-sm hover:shadow-md hover:border hover:border-burnt transition">
+          <h3 class="text-xl font-semibold">Collections Management</h3>
+          <p class="mt-2 opacity-80">
+            Maintain accurate records and preserve materials with clean systems and preventive care.
           </p>
-          <!-- <button class="mt-auto inline-block bg-burnt text-white hover:bg-burnt-hover transition-colors px-6 py-2 rounded-full font-medium">
-            Get Started →
-          </button> -->
-        </div>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>Accessioning, barcoding, and rehousing</li>
+            <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>Database support: ArchivesSpace, Mimsy XG, TMS</li>
+            <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>Object handling, tracking, and location control</li>
+            <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>Condition reporting & IPM coordination</li>
+          </ul>
+          <div class="mt-6 flex gap-3">
+            <NuxtLink to="/services" class="text-sm underline underline-offset-4 hover:opacity-80">Details</NuxtLink>
+            <NuxtLink to="/contact" class="text-sm underline underline-offset-4 hover:opacity-80">Book now</NuxtLink>
+          </div>
+        </article>
 
-        <!-- Archival Research & Cataloging Card (Highlighted) -->
-        <div class="service-card bg-white shadow-lg rounded-lg flex flex-col items-center text-center px-6 py-8">
-          <!-- Icon Placeholder -->
-          <div class="bg-terracotta p-4 rounded-lg mb-4">
-            <!-- Replace with actual SVG icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20l9-7-9-7-9 7 9 7z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12V2m0 0L5 7.5M12 2l7 5.5" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-semibold mb-4">Archival Research & Cataloging</h3>
-          <p class="text-base text-gray-700 mb-6">
-            Conduct detailed archival research, prepare descriptive metadata, and create catalog records using
-            Axiell Collections, CONTENTdm, and ArchivesSpace, following DACS and other archival standards.
+        <!-- Archival Research & Cataloging -->
+        <article class="group rounded-2xl border border-foreground/10 p-6 shadow-sm hover:shadow-md hover:border hover:border-burnt transition">
+          <h3 class="text-xl font-semibold">Archival Research & Cataloging</h3>
+          <p class="mt-2 opacity-80">
+            Create usable, standards‑aligned description and findability for your collections.
           </p>
-         <!-- <button class="mt-auto inline-block bg-burnt text-white hover:bg-burnt-hover transition-colors px-6 py-2 rounded-full font-medium">
-            Get Started →
-          </button> -->
-        </div>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>Descriptive metadata (DACS, LoC, AAT)</li>
+            <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>Catalog records in Axiell Collections, CONTENTdm, ArchivesSpace</li>
+            <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>Research dossiers & exhibition checklists</li>
+            <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>Rights, permissions, and citation guidance</li>
+          </ul>
+          <div class="mt-6 flex gap-3">
+            <NuxtLink to="/services" class="text-sm underline underline-offset-4 hover:opacity-80">Details</NuxtLink>
+            <NuxtLink to="/contact" class="text-sm underline underline-offset-4 hover:opacity-80">Start a request</NuxtLink>
+          </div>
+        </article>
 
-        <!-- Digital Preservation Card -->
-        <div class="service-card flex flex-col items-center text-center px-6 py-8">
-          <!-- Icon Placeholder -->
-          <div class="bg-terracotta p-4 rounded-lg mb-4">
-            <!-- Replace with actual SVG icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 3H8a2 2 0 00-2 2v14l6-3 6 3V5a2 2 0 00-2-2z" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-semibold mb-4">Digital Preservation</h3>
-          <p class="text-base text-gray-700 mb-6">
-            Implement digitization workflows, manage digitization requests, and perform preservation tasks such as
-            integrated pest management, freezing, and condition reporting to extend the life of physical materials.
+        <!-- Digital Preservation -->
+        <article class="group rounded-2xl border border-foreground/10 p-6 shadow-sm hover:shadow-md hover:border hover:border-burnt transition">
+          <h3 class="text-xl font-semibold">Digital Preservation</h3>
+          <p class="mt-2 opacity-80">
+            Stabilize born‑digital & digitized assets with practical workflows and documentation.
           </p>
-         <!--  <button class="mt-auto inline-block bg-burnt text-white hover:bg-burnt-hover transition-colors px-6 py-2 rounded-full font-medium">
-            Get Started →
-          </button> -->
-        </div>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>Digitization planning & requests intake</li>
+            <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>File‑naming, inventorying, and fixity checks</li>
+            <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>Preservation copies, backups, and storage tiers</li>
+            <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>Basic conservation tasks incl. freezing & pest mitigation</li>
+          </ul>
+          <div class="mt-6 flex gap-3">
+            <NuxtLink to="/services" class="text-sm underline underline-offset-4 hover:opacity-80">Details</NuxtLink>
+            <NuxtLink to="/contact" class="text-sm underline underline-offset-4 hover:opacity-80">Consultation</NuxtLink>
+          </div>
+        </article>
       </div>
+
     </div>
   </section>
 </template>
+
+<script setup>
+
+</script>
+
+<style scoped>
+
+</style>

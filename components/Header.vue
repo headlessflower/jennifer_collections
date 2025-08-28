@@ -55,7 +55,7 @@ const isOpen = ref(false)
                   @click="isOpen = false"
                   class="contact-button bg-terracotta text-indigo-900 hover:bg-terracotta-hover transition-colors px-4 py-2 rounded-full font-medium"
               >
-                Let&apos;s talk
+                Let's talk
               </button>
             </li>
           </ul>
