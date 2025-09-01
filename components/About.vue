@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="biography-section bg-gray-50 text-indigo-900 py-16">
+  <section class="biography-section bg-gray-50 text-indigo-900 py-16 mt-10">
     <div class="container mx-auto px-6 md:px-12">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Biography -->

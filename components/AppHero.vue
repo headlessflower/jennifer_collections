@@ -3,7 +3,7 @@
 </script>
 <template>
   <!-- Hero Content -->
-  <div class="hero-content flex flex-col md:flex-row items-center px-8 pb-16 py-16 md:h-[75vh] bg-[#f5f5dc]">
+  <div class="hero-content flex flex-col md:flex-row items-center px-8 pb-16 py-16 md:h-[75vh] bg-[#f5f5dc] mt-10">
     <div class="hero-left flex-1 text-left p-2">
 
       <h2 class="hero-name text-5xl md:text-6xl font-bold">Jennifer Payan</h2>

@@ -43,7 +43,7 @@
             <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>Condition reporting & IPM coordination</li>
           </ul>
           <div class="mt-6 flex gap-3">
-            <NuxtLink to="/services" class="text-sm underline underline-offset-4 hover:opacity-80">Details</NuxtLink>
+            <NuxtLink to="/collection-management" class="text-sm underline underline-offset-4 hover:opacity-80">Details</NuxtLink>
             <NuxtLink to="/contact" class="text-sm underline underline-offset-4 hover:opacity-80">Book now</NuxtLink>
           </div>
         </article>
@@ -61,7 +61,7 @@
             <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>Rights, permissions, and citation guidance</li>
           </ul>
           <div class="mt-6 flex gap-3">
-            <NuxtLink to="/services" class="text-sm underline underline-offset-4 hover:opacity-80">Details</NuxtLink>
+            <NuxtLink to="/research-cataloging" class="text-sm underline underline-offset-4 hover:opacity-80">Details</NuxtLink>
             <NuxtLink to="/contact" class="text-sm underline underline-offset-4 hover:opacity-80">Start a request</NuxtLink>
           </div>
         </article>
@@ -79,7 +79,7 @@
             <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>Basic conservation tasks incl. freezing & pest mitigation</li>
           </ul>
           <div class="mt-6 flex gap-3">
-            <NuxtLink to="/services" class="text-sm underline underline-offset-4 hover:opacity-80">Details</NuxtLink>
+            <NuxtLink to="/digital-preservation" class="text-sm underline underline-offset-4 hover:opacity-80">Details</NuxtLink>
             <NuxtLink to="/contact" class="text-sm underline underline-offset-4 hover:opacity-80">Consultation</NuxtLink>
           </div>
         </article>

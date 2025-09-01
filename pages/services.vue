@@ -1,7 +1,7 @@
 <template>
   <section class="w-full">
     <!-- Page Header -->
-    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mx-auto mt-12 max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
       <header class="text-center mb-10">
         <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight">Services</h1>
         <p class="mt-3 text-base sm:text-lg opacity-80">
@@ -54,7 +54,7 @@
           </ul>
           <div class="mt-6 flex gap-3">
             <NuxtLink to="/contact" class="text-sm inline-flex items-center gap-1 font-medium text-burnt hover:opacity-90">Start a request</NuxtLink>
-            <NuxtLink to="/services#scope" class="text-sm underline underline-offset-4 decoration-burnt hover:opacity-80">Scope details</NuxtLink>
+            <NuxtLink to="/collection-management" class="text-sm underline underline-offset-4 decoration-burnt hover:opacity-80">Scope details</NuxtLink>
           </div>
         </article>
 
@@ -70,7 +70,7 @@
           </ul>
           <div class="mt-6 flex gap-3">
             <NuxtLink to="/contact" class="text-sm inline-flex items-center gap-1 font-medium text-burnt hover:opacity-90">Get research help</NuxtLink>
-            <NuxtLink to="/services#deliverables" class="text-sm underline underline-offset-4 decoration-burnt hover:opacity-80">Sample deliverables</NuxtLink>
+            <NuxtLink to="/research-cataloging" class="text-sm underline underline-offset-4 decoration-burnt hover:opacity-80">Learn more</NuxtLink>
           </div>
         </article>
 
@@ -86,7 +86,7 @@
           </ul>
           <div class="mt-6 flex gap-3">
             <NuxtLink to="/contact" class="text-sm inline-flex items-center gap-1 font-medium text-burnt hover:opacity-90">Plan preservation</NuxtLink>
-            <NuxtLink to="/services#workflow" class="text-sm underline underline-offset-4 decoration-burnt hover:opacity-80">Workflow overview</NuxtLink>
+            <NuxtLink to="/digital-preservation" class="text-sm underline underline-offset-4 decoration-burnt hover:opacity-80">Workflow overview</NuxtLink>
           </div>
         </article>
 

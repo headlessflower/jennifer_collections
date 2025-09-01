@@ -3,8 +3,8 @@ import { ref } from 'vue'
 const isOpen = ref(false)
 </script>
 <template>
-  <header >
-    <nav class="hero-nav flex justify-between bg-cream items-center px-8 py-6 relative">
+  <header class="fixed top-0 w-full z-10" >
+    <nav class="hero-nav flex justify-between bg-cream items-center px-8 py-6 relative ">
       <div class="nav-left">
         <h1 class="logo text-2xl font-bold lowercase">jennifer payan</h1>
       </div>

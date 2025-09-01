@@ -19,7 +19,7 @@
           <p class="text-sm text-gray-700">2023 - Present</p>
           <h3 class="text-xl font-semibold">Master of Library & Information Science</h3>
           <p class="text-base text-gray-700">San Jose State University</p>
-        </div>
+        </div> 
         <div>
           <p class="text-sm text-gray-700">2020 - 2022</p>
           <h3 class="text-xl font-semibold">Bachelor of Arts, Art History</h3>
