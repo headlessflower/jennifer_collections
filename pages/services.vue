@@ -117,8 +117,8 @@
             <li class="flex gap-2"><span class="mt-1 size-1.5 rounded-full bg-burnt/70"></span>Up to 1 hr content edits/mo</li>
           </ul>
           <div class="mt-6 flex gap-3">
-            <NuxtLink to="/contact" class="text-sm inline-flex items-center gap-1 font-medium text-burnt hover:opacity-90">Ask about plans</NuxtLink>
-            <NuxtLink to="/services#care" class="text-sm underline underline-offset-4 decoration-burnt hover:opacity-80">Plan details</NuxtLink>
+            <NuxtLink to="https://headlessflower.dev/monthly-maintenance" class="text-sm inline-flex items-center gap-1 font-medium text-burnt hover:opacity-90">Ask about plans</NuxtLink>
+            <NuxtLink to="https://headlessflower.dev/databases" target="_blank" class="text-sm underline underline-offset-4 decoration-burnt hover:opacity-80">Plan details</NuxtLink>
           </div>
         </article>
 
