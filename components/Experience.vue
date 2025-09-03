@@ -45,7 +45,7 @@
         </div>
         <div>
           <p class="text-sm text-gray-700">July 2024 - March 2025</p>
-          <h3 class="text-xl font-semibold">Temporary Assistant Registrar</h3>
+          <h3 class="text-xl font-semibold">Assistant Registrar</h3>
           <p class="text-base text-gray-700">Academy Museum of Motion Pictures</p>
         </div>
         <div>
