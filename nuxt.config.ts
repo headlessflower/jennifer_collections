@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/icon",
     "@nuxtjs/seo",
+    "@nuxtjs/supabase",
   ],
   tailwindcss: {
     exposeConfig: true,
@@ -19,6 +20,17 @@ export default defineNuxtConfig({
   site: {
     url: 'https://jenniferpayan.info',
     name: 'Jennifer Payan: Registration and Collections Care Professional',
-    // ...etc
   },
+  supabase: {
+    redirect: false,
+
+  },
+  runtimeConfig: {
+    public: {
+      supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
+      supabaseKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
+    }
+  }
+
+
 });

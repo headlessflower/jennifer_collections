@@ -1,147 +1,207 @@
-<script setup>
-import { ref } from "vue";
+<template>
+  <section class="w-full">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
+      <header class="mb-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">Contact</h2>
+        <p class="mt-3 text-base/7 sm:text-lg/8 opacity-80">
+          Send a note—I'll get back to you soon.
+        </p>
+      </header>
 
-const form = ref({
-    name: "",
-    email: "",
-    message: "",
-});
+      <!-- Grid: Info + Form -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Info panel -->
+        <aside class="rounded-2xl border border-foreground/10 p-6 shadow-sm hover:shadow-md transition">
+          <h3 class="text-xl font-semibold">Get in touch</h3>
+          <p class="mt-2 opacity-80">
+            For project inquiries, collaborations, or speaking invitations, reach out anytime.
+          </p>
 
-function handleSubmit() {
-    console.log("Form submitted:", form.value);
+          <dl class="mt-5 space-y-4 text-sm">
+            <div class="flex items-start gap-3">
+              <span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>
+              <div>
+                <dt class="font-medium">Email</dt>
+                <dd class="opacity-80">
+                  <a class="underline underline-offset-4 hover:opacity-80" href="mailto:payanjennifer9@gmail.com">
+                    payanjennifer9@gmail.com
+                  </a>
+                </dd>
+              </div>
+            </div>
 
-    // Reset fields after submission
-    form.value = { name: "", email: "", message: "" };
+            <div class="flex items-start gap-3">
+              <span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>
+              <div>
+                <dt class="font-medium">Phone</dt>
+                <dd class="opacity-80">
+                  <a class="underline underline-offset-4 hover:opacity-80" href="tel:+13232707263">
+                    (323) 270-7263
+                  </a>
+                </dd>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>
+              <div>
+                <dt class="font-medium">Based in</dt>
+                <dd class="opacity-80">Los Angeles, CA</dd>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>
+              <div>
+                <dt class="font-medium">Services</dt>
+                <dd class="opacity-80">
+                  Collections Management · Archival Research · Digital Preservation · Public Art Conservation
+                </dd>
+              </div>
+            </div>
+          </dl>
+
+          <!-- Optional: quick actions -->
+          <div class="mt-6 flex flex-wrap gap-3">
+            <NuxtLink
+                to="/services"
+                class="inline-flex items-center justify-center border border-burnt hover:bg-burnt rounded-2xl px-4 py-2 text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition"
+            >
+              Explore Services
+            </NuxtLink>
+            <NuxtLink
+                to="/projects"
+                class="inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-medium border hover:border-burnt border-foreground/15 hover:border-foreground/30 hover:shadow-sm transition"
+            >
+              See Projects
+            </NuxtLink>
+          </div>
+        </aside>
+
+        <!-- Form -->
+        <div class="lg:col-span-2">
+          <form
+              @submit.prevent="onSubmit"
+              class="rounded-2xl border border-foreground/10 p-6 shadow-sm hover:shadow-md transition"
+              novalidate
+          >
+
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-sm font-medium opacity-80">Name</label>
+                <input
+                    id="name"
+                    v-model.trim="form.name"
+                    type="text"
+                    required
+                    minlength="2"
+                    class="mt-2 w-full rounded-xl border border-foreground/15 bg-transparent px-4 py-3 outline-none focus:ring-2 focus:ring-burnt"
+                    placeholder="Your full name"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium opacity-80">Email</label>
+                <input
+                    id="email"
+                    v-model.trim="form.email"
+                    type="email"
+                    required
+                    class="mt-2 w-full rounded-xl border border-foreground/15 bg-transparent px-4 py-3 outline-none focus:ring-2 focus:ring-burnt"
+                    placeholder="you@example.org"
+                />
+              </div>
+
+              <div class="sm:col-span-2">
+                <label for="org" class="block text-sm font-medium opacity-80">Organization (optional)</label>
+                <input
+                    id="org"
+                    v-model.trim="form.organization"
+                    type="text"
+                    class="mt-2 w-full rounded-xl border border-foreground/15 bg-transparent px-4 py-3 outline-none focus:ring-2 focus:ring-burnt"
+                    placeholder="Organization / Institution"
+                />
+              </div>
+
+              <div class="sm:col-span-2">
+                <label for="msg" class="block text-sm font-medium opacity-80">Message</label>
+                <textarea
+                    id="msg"
+                    v-model.trim="form.message"
+                    required
+                    minlength="5"
+                    rows="6"
+                    class="mt-2 w-full rounded-xl border border-foreground/15 bg-transparent px-4 py-3 outline-none focus:ring-2 focus:ring-burnt"
+                    placeholder="How can I help?"
+                />
+              </div>
+            </div>
+
+            <div class="mt-6 flex items-center gap-3">
+              <button
+                  type="submit"
+                  :disabled="loading"
+                  class="inline-flex items-center justify-center border border-burnt hover:bg-burnt rounded-2xl px-5 py-3 text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                <span v-if="!loading">Send message</span>
+                <span v-else>Sending…</span>
+              </button>
+
+              <p v-if="success" class="text-sm text-green-600">Thanks! Your message has been sent.</p>
+              <p v-if="error" class="text-sm text-red-600">{{ error }}</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { reactive, ref } from 'vue'
+
+const supabase = useSupabaseClient()
+type ContactForm = { name: string; email: string; organization?: string; message: string }
+
+const form = reactive<ContactForm>({ name: '', email: '', organization: '', message: '' })
+const loading = ref(false)
+const success = ref(false)
+const error = ref<string | null>(null)
+
+async function onSubmit() {
+  error.value = null
+  success.value = false
+
+  if (!form.name || !form.email || !form.message) {
+    error.value = 'Please fill in name, email, and message.'
+    return
+  }
+
+  loading.value = true
+  try {
+    const { error: insertError } = await supabase.from('contact_messages').insert([{
+      name: form.name,
+      email: form.email,
+      organization: form.organization || null,
+      message: form.message
+    }])
+
+    if (insertError) throw insertError
+
+    success.value = true
+    form.name = ''
+    form.email = ''
+    form.organization = ''
+    form.message = ''
+  } catch (e: any) {
+    error.value = e?.message || 'Something went wrong. Please try again.'
+  } finally {
+    loading.value = false
+  }
 }
 </script>
-<template>
-    <section class="contact-section bg-burnt text-white py-16" id="contact">
-        <div class="container mx-auto px-6 md:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- Left Side: Heading + Contact Info + Portfolio Button -->
-                <div class="space-y-8">
-                    <h2 class="text-4xl md:text-5xl font-semibold">
-                        Let’s Collaborate
-                    </h2>
 
-                    <!-- Contact Details -->
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <!-- Phone Icon  -->
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-6 w-6 text-cream flex-shrink-0"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M3 8l7.89 7.89a5 5 0 007.07 0L21 11m-9-2V3m0 0L7 7m4-4l4 4"
-                                />
-                            </svg>
-                            <p class="text-base">(323) 270-7263</p>
-                        </div>
-
-                        <div class="flex items-center space-x-3">
-                            <!-- Email Icon  -->
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-6 w-6 text-cream flex-shrink-0"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M16 12l-4-4m0 0l-4 4m4-4v12"
-                                />
-                            </svg>
-                            <p class="text-base">payanjennifer9@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <!-- “View Portfolio” Button
-
-          <NuxtLink
-              to="/work"
-              class="inline-block bg-white text-indigo-900 hover:bg-gray-100 transition-colors font-medium px-6 py-3 rounded-full"
-          >
-            View Portfolio →
-          </NuxtLink>
-          -->
-                </div>
-
-                <!-- Right Side: Contact Form -->
-                <div>
-                    <div
-                        class="bg-cream rounded-lg p-8 md:p-12 text-indigo-900"
-                    >
-                        <h3 class="text-2xl font-semibold mb-6">Send a note</h3>
-                        <form
-                            @submit.prevent="handleSubmit"
-                            class="space-y-6"
-                            action="https://formsubmit.io/send/payanjennifer9@gmail.com"
-                            method="post"
-                        >
-                            <!-- Name Field -->
-                            <div>
-                                <label for="name" class="sr-only">Name</label>
-                                <input
-                                    v-model="form.name"
-                                    id="name"
-                                    type="text"
-                                    placeholder="Name"
-                                    class="w-full px-4 py-3 rounded-lg bg-yellow-50 border border-indigo-900 focus:outline-none focus:ring-2 focus:ring-indigo-900"
-                                    required
-                                />
-                            </div>
-
-                            <!-- Email Field -->
-                            <div>
-                                <label for="email" class="sr-only">Email</label>
-                                <input
-                                    v-model="form.email"
-                                    id="email"
-                                    type="email"
-                                    placeholder="Email"
-                                    class="w-full px-4 py-3 rounded-lg bg-yellow-50 border border-indigo-900 focus:outline-none focus:ring-2 focus:ring-indigo-900"
-                                    required
-                                />
-                            </div>
-
-                            <!-- Message Field -->
-                            <div>
-                                <label for="message" class="sr-only"
-                                    >Message</label
-                                >
-                                <textarea
-                                    v-model="form.message"
-                                    id="message"
-                                    rows="6"
-                                    placeholder="Write me a message..."
-                                    class="w-full px-4 py-3 rounded-lg bg-yellow-50 border border-indigo-900 focus:outline-none focus:ring-2 focus:ring-indigo-900 resize-none"
-                                    required
-                                ></textarea>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <div>
-                                <button
-                                    type="submit"
-                                    class="bg-terracotta text-white hover:bg-terracotta-hover transition-colors font-medium px-6 py-2 rounded-full"
-                                >
-                                    Submit
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</template>
+<style scoped>
+.rounded-2xl { transition: box-shadow 200ms ease, border-color 200ms ease; }
+</style>

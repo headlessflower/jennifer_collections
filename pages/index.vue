@@ -5,5 +5,6 @@
 <About/>
         <AppServices />
       <Experience/>
+      <Projects/>
     </div>
 </template>

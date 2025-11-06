@@ -6,6 +6,6 @@
   <div>
     <Header />
     <NuxtPage />
-    <AppContact />
+   <AppContact />
   </div>
 </template>
