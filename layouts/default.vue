@@ -1,11 +1,10 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-  <div>
-    <Header />
-    <NuxtPage />
-   <AppContact />
-  </div>
+    <div>
+        <Header />
+        <NuxtPage />
+        <AppContact />
+        <Copyright />
+    </div>
 </template>
