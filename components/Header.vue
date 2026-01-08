@@ -33,9 +33,9 @@ const isOpen = ref(false)
 
       <!-- Contact Button (Desktop) -->
       <div class="nav-right hidden md:block">
-        <a href="#contact" class="contact-button bg-terracotta text-white hover:bg-terracotta-hover transition-colors px-4 py-2 rounded-full font-medium">
+        <NuxtLink to="/contact" class="contact-button bg-terracotta text-white hover:bg-terracotta-hover transition-colors px-4 py-2 rounded-full font-medium">
           Let&apos;s talk
-        </a>
+        </NuxtLink>
       </div>
 
       <!-- Mobile Dropdown Menu -->
@@ -51,12 +51,12 @@ const isOpen = ref(false)
             <li><NuxtLink @click="isOpen = false" to="/services" class="text-indigo-900 hover:underline">Services</NuxtLink></li>
 
             <li>
-              <button
-                  @click="isOpen = false"
+              <NuxtLink
+                  to="/contact"
                   class="contact-button bg-terracotta text-indigo-900 hover:bg-terracotta-hover transition-colors px-4 py-2 rounded-full font-medium"
               >
                 Let's talk
-              </button>
+              </NuxtLink>
             </li>
           </ul>
         </div>
