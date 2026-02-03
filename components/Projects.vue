@@ -87,7 +87,16 @@ const projects: ProjectCard[] = [
     href: "/dominguez-sculpture-restoration",
     image: "/dominguez-thumbnail.png",
     imageAlt: "Outdoor sculpture under restoration with scaffolding."
-  }
+  },
+  {
+    slug: "blessing-animals-mural-olvera-street",
+    title: "Blessing of the Animals Mural - Olvera St.",
+    description:
+        "Public art conservation assisting with mural clean up and restoration. ",
+    href: "/blessing-animals-mural-olvera-street",
+    image: "/jennifer_olvera-street.JPG",
+    imageAlt: "Outdoor sculpture under restoration with scaffolding."
+  },
 ]
 </script>
 

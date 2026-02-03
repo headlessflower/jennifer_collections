@@ -41,8 +41,9 @@
       </article>
 
       <!-- Image placeholder -->
-      <figure class="mt-8 rounded-2xl border border-foreground/10 bg-foreground/5 h-64 sm:h-80 w-full overflow-hidden flex items-center justify-center">
-        <span class="opacity-60 text-sm">[ Replace with project image ]</span>
+      <figure class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
+         w-full max-w-5xl mx-auto overflow-hidden">
+        <span class="opacity-60 text-sm"><img class="w-full h-auto object-contain" src="/" alt=""></span>
       </figure>
 
       <!-- Section 1 -->
@@ -59,8 +60,9 @@
       </article>
 
       <!-- Image placeholder -->
-      <figure class="mt-8 rounded-2xl border border-foreground/10 bg-foreground/5 h-64 sm:h-80 w-full overflow-hidden flex items-center justify-center">
-        <span class="opacity-60 text-sm">[ Replace with process image / in-situ photo ]</span>
+      <figure class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
+         w-full max-w-5xl mx-auto overflow-hidden">
+        <span class="opacity-60 text-sm"><img class="w-full h-auto object-contain" src="/" alt=""></span>
       </figure>
 
       <!-- Section 2 -->
@@ -77,8 +79,9 @@
       </article>
 
       <!-- Image placeholder -->
-      <figure class="mt-8 rounded-2xl border border-foreground/10 bg-foreground/5 h-64 sm:h-80 w-full overflow-hidden flex items-center justify-center">
-        <span class="opacity-60 text-sm">[ Replace with result image / before-after pair ]</span>
+      <figure class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
+         w-full max-w-5xl mx-auto overflow-hidden">
+        <span class="opacity-60 text-sm"><img class="w-full h-auto object-contain" src="/" alt=""></span>
       </figure>
 
       <!-- Section 3 -->

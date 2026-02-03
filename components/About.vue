@@ -35,7 +35,7 @@
           <!-- Statistics -->
           <div class="stats grid grid-cols-2 sm:grid-cols-4 gap-6 mt-6">
             <div class="stat-item text-center">
-              <h3 class="text-3xl font-bold">3+</h3>
+              <h3 class="text-3xl font-bold">4+</h3>
               <p class="text-sm text-gray-700">Years of Experience</p>
             </div>
             <div class="stat-item text-center">

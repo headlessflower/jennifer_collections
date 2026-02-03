@@ -53,13 +53,14 @@
 
             <!-- Image placeholder -->
             <figure
-                class="mt-8 rounded-2xl border border-foreground/10 bg-foreground/5 h-64 sm:h-80 w-full overflow-hidden flex items-center justify-center"
+                class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
+         w-full max-w-5xl mx-auto overflow-hidden"
             >
                 <span class="text-sm"
                     ><img
                         src="/dominguez-1.png"
                         alt="painting dragon scales"
-                        class="translate-y-16"
+                        class="w-full h-auto object-contain"
                 /></span>
             </figure>
 
@@ -82,13 +83,14 @@
 
             <!-- Image placeholder -->
             <figure
-                class="mt-8 rounded-2xl border border-foreground/10 bg-foreground/5 h-64 sm:h-80 w-full overflow-hidden flex items-center justify-center"
+                class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
+         w-full max-w-5xl mx-auto overflow-hidden"
             >
                 <span class="text-sm"
                     ><img
                         src="/dominguez-2.png"
                         alt="painting dragon scales"
-                        class="translate-y-16"
+                        class="w-full h-auto object-contain"
                 /></span>
             </figure>
 
@@ -111,10 +113,11 @@
 
             <!-- Image placeholder -->
             <figure
-                class="mt-8 rounded-2xl border border-foreground/10 bg-foreground/5 h-64 sm:h-80 w-full overflow-hidden flex items-center justify-center"
+                class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
+         w-full max-w-5xl mx-auto overflow-hidden"
             >
                 <span class="opacity-60 text-sm"
-                    >[ Replace with result image / before-after pair ]</span
+                    ><img class="w-full h-auto object-contain" src="/" alt=""></span
                 >
             </figure>
 

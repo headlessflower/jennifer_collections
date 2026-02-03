@@ -83,11 +83,13 @@
 
             <!-- Image placeholder -->
             <figure
-                class="mt-8 rounded-2xl border border-foreground/10 bg-foreground/5 h-64 sm:h-80 w-full overflow-hidden flex items-center justify-center"
+                class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
+         w-full max-w-5xl mx-auto overflow-hidden"
             >
                 <img
                     src="/ellsworth-4.png"
                     alt="Jennifer standing in Ellsworth's Studio"
+                    class="w-full h-auto object-contain"
                 />
             </figure>
 
@@ -141,11 +143,13 @@
 
             <!-- Image placeholder -->
             <figure
-                class="mt-8 rounded-2xl border border-foreground/10 bg-foreground/5 h-64 sm:h-80 w-full overflow-hidden flex items-center justify-center"
+                class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
+         w-full max-w-5xl mx-auto overflow-hidden"
             >
                 <img
                     src="/ellsworth-2.png"
                     alt="Jennifer entering artifact information into the database.  "
+                    class="w-full h-auto object-contain"
                 />
             </figure>
 
@@ -200,7 +204,7 @@
                     fields (author, title, publisher, year, subjects), and
                     implementing Library of Congress classification to assign
                     call numbers. I labeled and shelved materials alphabetically
-                    by artist, improving accessibility and browseability for
+                    by artist, improving accessibility and browse-ability for
                     staff and researchers.
                 </p>
 
@@ -215,12 +219,13 @@
 
             <!-- Image placeholder -->
             <figure
-                class="mt-8 rounded-2xl border border-foreground/10 bg-foreground/5 h-64 sm:h-80 w-full overflow-hidden flex items-center justify-center"
+                class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
+         w-full max-w-5xl mx-auto overflow-hidden"
             >
                 <img
                     src="/ellsworth-project-4.png"
                     alt="Data table with project progress"
-                    class="translate-y-16"
+                    class="w-full h-auto object-contain"
                 />
             </figure>
 
