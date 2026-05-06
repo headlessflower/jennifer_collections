@@ -1,0 +1,20 @@
+{
+  "name": "nuxt-image-gallery-lightbox",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "nuxt": "^3.0.0"
+  },
+  "devDependencies": {
+    "@nuxt/kit": "^3.0.0"
+  }
+}

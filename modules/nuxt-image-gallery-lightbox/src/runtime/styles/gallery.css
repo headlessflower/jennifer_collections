@@ -1,0 +1,133 @@
+.ng__grid {
+    display: grid;
+    gap: var(--ng-gap, 12px);
+    grid-template-columns: repeat(var(--ng-cols, 2), minmax(0, 1fr));
+}
+
+@media (min-width: 640px) {
+    .ng__grid {
+        grid-template-columns: repeat(var(--ng-cols-sm, 3), minmax(0, 1fr));
+    }
+}
+@media (min-width: 768px) {
+    .ng__grid {
+        grid-template-columns: repeat(var(--ng-cols-md, 4), minmax(0, 1fr));
+    }
+}
+@media (min-width: 1024px) {
+    .ng__grid {
+        grid-template-columns: repeat(var(--ng-cols-lg, 5), minmax(0, 1fr));
+    }
+}
+
+.ng__item {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: zoom-in;
+    border-radius: var(--ng-radius, 14px);
+    overflow: hidden;
+}
+
+.ng__img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    transform: translateZ(0);
+    transition: transform 140ms ease;
+}
+
+.ng__item:hover .ng__img {
+    transform: scale(1.02);
+}
+
+/* Lightbox */
+.nlb {
+    position: fixed;
+    inset: 0;
+    background: var(--nlb-backdrop, rgba(0, 0, 0, 0.92));
+    display: grid;
+    grid-template-columns: 64px 1fr 64px;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    z-index: 9999;
+}
+
+@media (max-width: 640px) {
+    .nlb {
+        grid-template-columns: 48px 1fr 48px;
+    }
+}
+
+.nlb__figure {
+    margin: 0;
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+}
+
+.nlb__img {
+    max-width: min(1100px, 100%);
+    max-height: min(82vh, 100%);
+    border-radius: 14px;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.nlb__cap {
+    width: min(1100px, 100%);
+    display: grid;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+}
+
+.nlb__caption {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.nlb__count {
+    font-variant-numeric: tabular-nums;
+}
+
+.nlb__credit {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nlb__close {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nlb__nav {
+    width: 44px;
+    height: 56px;
+    border: 0;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.nlb__nav:active,
+.nlb__close:active {
+    transform: scale(0.98);
+}

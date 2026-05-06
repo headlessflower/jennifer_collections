@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/seo",
     "@nuxtjs/supabase",
-    "nuxt-gtag"
+    "nuxt-gtag",
+      "~/modules/nuxt-image-gallery-lightbox/src/module"
   ],
   tailwindcss: {
     exposeConfig: true,
@@ -31,7 +32,16 @@ export default defineNuxtConfig({
       supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
       supabaseKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
     }
-  }
+  },
+  imageGallery: {
+    css: true,
+    defaults: {
+      gap: 10,
+      radius: 16,
+      columns: { base: 2, sm: 3, md: 4, lg: 5 },
+      nuxtImg: { format: "webp", quality: 82, sizes: "sm:50vw md:33vw lg:20vw" },
+    },
+  },
 
 
 });
