@@ -1,43 +1,50 @@
 <template>
-  <section class="w-full">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
-      <header class="mb-10 text-center">
-        <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">
+  <section class="w-full py-16 md:py-24" :class="{ 'border-t border-brandDark/10': showBorder }">
+    <div class="mx-auto max-w-7xl px-6 md:px-12">
+      <header class="mb-12 text-center space-y-4">
+        <h2 class="text-4xl md:text-5xl font-serif font-bold text-brandDark tracking-tight">
           Recent Projects
         </h2>
-        <p class="mt-3 text-base/7 sm:text-lg/8 opacity-80">
+        <p class="mt-3 text-lg text-brandDark/70 max-w-2xl mx-auto font-sans">
           Conservation, archives, and public art highlights from Jennifer’s practice.
         </p>
       </header>
 
       <!-- Projects Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
         <article
             v-for="project in projects"
             :key="project.slug"
-            class="group rounded-2xl border border-foreground/10 shadow-sm hover:shadow-md hover:border hover:border-burnt transition"
+            class="group bg-brandBg rounded-[28px] border border-brandDark/15 overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
         >
-          <NuxtLink :to="project.href" class="block rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black/40">
-            <!-- Image -->
-            <div class="overflow-hidden rounded-2xl rounded-b-none">
-              <img
-                  :src="project.image"
-                  :alt="project.imageAlt"
-                  class="h-48 w-full object-cover object-top transition-transform duration-300 ease-out group-hover:scale-105 "
-                  loading="lazy"
-              />
+          <NuxtLink :to="project.href" class="block h-full flex flex-col justify-between focus:outline-none">
+            <div>
+              <!-- Image -->
+              <div class="overflow-hidden h-52 w-full border-b border-brandDark/10 bg-neutral-200">
+                <img
+                    :src="project.image"
+                    :alt="project.imageAlt"
+                    class="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+                    loading="lazy"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="p-6 space-y-2">
+                <h3 class="text-xl font-serif font-bold text-brandDark leading-snug group-hover:text-brandDark/90 transition-colors">
+                  {{ project.title }}
+                </h3>
+                <p class="text-sm text-brandDark/85 font-sans leading-relaxed">
+                  {{ project.description }}
+                </p>
+              </div>
             </div>
 
-            <!-- Content -->
-            <div class="p-6">
-              <h3 class="text-xl font-semibold">{{ project.title }}</h3>
-              <p class="mt-2 opacity-80">
-                {{ project.description }}
-              </p>
-
-              <div class="mt-6 inline-flex items-center text-sm underline underline-offset-4 group-hover:opacity-80">
+            <!-- Action Link -->
+            <div class="p-6 pt-0 mt-auto">
+              <div class="inline-flex items-center text-xs font-bold uppercase tracking-wider text-brandDark underline underline-offset-4 decoration-brandYellow decoration-2 group-hover:text-brandDark/70 transition">
                 View project
-                <svg class="ml-2 h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg class="ml-2 h-3.5 w-3.5 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l5 5a.997.997 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
                 </svg>
               </div>
@@ -50,6 +57,13 @@
 </template>
 
 <script setup lang="ts">
+defineProps({
+  showBorder: {
+    type: Boolean,
+    default: true
+  }
+})
+
 type ProjectCard = {
   slug: string
   title: string
@@ -92,7 +106,7 @@ const projects: ProjectCard[] = [
     slug: "blessing-animals-mural-olvera-street",
     title: "Blessing of the Animals Mural - Olvera St.",
     description:
-        "Public art conservation assisting with mural clean up and restoration. ",
+        "Public art conservation assisting with mural clean up and restoration.",
     href: "/blessing-animals-mural-olvera-street",
     image: "/jennifer_olvera-street.JPG",
     imageAlt: "Outdoor sculpture under restoration with scaffolding."
@@ -101,8 +115,4 @@ const projects: ProjectCard[] = [
 </script>
 
 <style scoped>
-/* Keep hover/tap elevation subtle like Services */
-article.group {
-  transition: box-shadow 200ms ease, border-color 200ms ease;
-}
 </style>

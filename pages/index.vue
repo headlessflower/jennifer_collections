@@ -2,9 +2,10 @@
 <template>
     <div>
         <AppHero />
-<About/>
+        <About/>
         <AppServices />
-      <Experience/>
-      <Projects/>
+        <AppProcess />
+        <Experience/>
+        <Projects/>
     </div>
 </template>

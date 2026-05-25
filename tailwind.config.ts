@@ -3,7 +3,17 @@ export default {
     // If you’re using Nuxt 3, it might be `export default { ... }` instead of `module.exports`.
     theme: {
         extend: {
+            fontFamily: {
+                sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                serif: ['"Playfair Display"', 'serif'],
+            },
             colors: {
+                brandBg: '#F3F2ED',
+                brandDark: '#1E2022',
+                brandYellow: '#FCE38A',
+                brandBlue: '#C5E3F6',
+                brandPurple: '#D2C4E9',
+                brandGreen: '#C8D6C5',
                 terracotta: {
                     DEFAULT: '#C1440E',
                     hover:   '#A2360C',
