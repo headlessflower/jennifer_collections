@@ -15,6 +15,7 @@ const isOpen = ref(false)
         <li><NuxtLink to="/about" class="hover:text-brandDark hover:underline underline-offset-4 decoration-brandYellow decoration-2 transition">About Me</NuxtLink></li>
         <li><NuxtLink to="/experience" class="hover:text-brandDark hover:underline underline-offset-4 decoration-brandYellow decoration-2 transition">Experience</NuxtLink></li>
         <li><NuxtLink to="/projects" class="hover:text-brandDark hover:underline underline-offset-4 decoration-brandYellow decoration-2 transition">Projects</NuxtLink></li>
+        <li><NuxtLink to="/gallery" class="hover:text-brandDark hover:underline underline-offset-4 decoration-brandYellow decoration-2 transition">Gallery</NuxtLink></li>
         <li><NuxtLink to="/services" class="hover:text-brandDark hover:underline underline-offset-4 decoration-brandYellow decoration-2 transition">Services</NuxtLink></li>
       </ul>
 
@@ -49,7 +50,8 @@ const isOpen = ref(false)
             <li><NuxtLink @click="isOpen = false" to="/" class="text-brandDark hover:underline">Home</NuxtLink></li>
             <li><NuxtLink @click="isOpen = false" to="/about" class="text-brandDark hover:underline">About Me</NuxtLink></li>
             <li><NuxtLink @click="isOpen = false" to="/experience" class="text-brandDark hover:underline">Experience</NuxtLink></li>
-           <li><NuxtLink @click="isOpen = false" to="/projects" class="text-brandDark hover:underline">Projects</NuxtLink></li>
+            <li><NuxtLink @click="isOpen = false" to="/projects" class="text-brandDark hover:underline">Projects</NuxtLink></li>
+            <li><NuxtLink @click="isOpen = false" to="/gallery" class="text-brandDark hover:underline">Gallery</NuxtLink></li>
             <li><NuxtLink @click="isOpen = false" to="/services" class="text-brandDark hover:underline">Services</NuxtLink></li>
 
             <li class="pt-2">
