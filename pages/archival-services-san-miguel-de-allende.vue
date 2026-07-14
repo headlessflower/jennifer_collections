@@ -84,9 +84,9 @@ const content = computed(() => {
         duration: "Multi-session project",
       },
     },
-    pricingTitle: "Pricing ranges",
+    pricingTitle: "Pricing overview",
     pricingSub:
-        "Transparent starting ranges in USD & MXN. Final cost depends on volume, condition, travel, and desired outputs.",
+        "Transparent starting prices in USD & MXN. Final cost depends on volume, condition, travel, and desired outputs.",
     pricingNotes: [
       "Consultations can be applied toward a package when you proceed (optional).",
       "MXN estimates use a rounded exchange rate for clarity—final invoices can be USD or MXN.",
@@ -138,7 +138,7 @@ const content = computed(() => {
     ],
     contactTitle: "Contact",
     contactSub:
-        "If you’ve been meaning to “get organized someday,” this is that moment.",
+      "If you’ve been meaning to “get organized someday,” this is that moment.",
     contact: {
       name: "Jennifer Payan",
       phoneLabel: "Phone",
@@ -212,9 +212,9 @@ const content = computed(() => {
         duration: "Varias sesiones",
       },
     },
-    pricingTitle: "Rangos de precios",
+    pricingTitle: "Costos de los servicios",
     pricingSub:
-        "Rangos iniciales en USD y MXN. El costo final depende del volumen, condición, traslados y resultados deseados.",
+        "Precios iniciales estimados en USD y MXN. El costo final depende del volumen, condición, traslados y resultados deseados.",
     pricingNotes: [
       "La consulta puede aplicarse al paquete si decide continuar (opcional).",
       "Estimaciones en MXN con tipo de cambio redondeado—la factura puede ser en USD o MXN.",
@@ -295,69 +295,82 @@ useHead(() => ({
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#FAFAF8]  text-zinc-800">
+  <div class="min-h-screen bg-brandBg text-brandDark pt-16">
 
     <!-- Hero -->
     <section class="relative overflow-hidden">
-
-      <div class="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-2 md:py-20">
-        <div>
-          <p class="inline-flex items-center gap-2 rounded-full border border-zinc-700/60 bg-zinc-100/5 px-3 py-1 text-xs font-zinc-600">
-            <span class="h-1.5 w-1.5 rounded-full bg-zinc-300/80"></span>
+      <div class="mx-auto grid max-w-7xl gap-10 px-6 md:px-12 py-16 md:grid-cols-2 md:py-24 items-center">
+        <div class="space-y-6">
+          <p class="inline-flex items-center gap-2 rounded-full border border-brandDark/15 bg-brandDark/5 px-4 py-1 text-xs font-semibold text-brandDark/70 font-sans tracking-wide uppercase">
+            <span class="h-1.5 w-1.5 rounded-full bg-brandDark/40"></span>
             {{ content.badge }}
           </p>
 
-          <h1 class="mt-5 text-4xl font-medium tracking-tight md:text-5xl">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-brandDark tracking-tight leading-tight">
             {{ content.heroTitle }}
           </h1>
 
-          <p class="mt-4 max-w-prose text-base leading-relaxed font-zinc-600 md:text-lg">
+          <p class="max-w-prose text-base md:text-lg text-brandDark/80 leading-relaxed font-sans">
             {{ content.heroSub }}
           </p>
 
-          <div class="mt-7 flex flex-wrap gap-3">
+          <div class="flex flex-wrap gap-4 pt-2">
             <a
                 href="#contact"
-                class="rounded-2xl bg-white px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-600"
+                class="rounded-full bg-brandDark text-brandBg hover:bg-brandDark/90 transition-all px-8 py-3.5 text-sm font-medium tracking-wide shadow-sm hover:shadow-md"
             >
               {{ content.heroCtaPrimary }}
             </a>
             <a
                 href="#packages"
-                class="rounded-2xl border border-zinc-700/70 bg-zinc-100/5 px-5 py-3 text-sm font-medium text-zinc-600 hover:bg-zinc-100/10"
+                class="rounded-full border border-brandDark/25 text-brandDark hover:bg-brandDark/5 transition-all px-8 py-3.5 text-sm font-medium tracking-wide"
             >
               {{ content.heroCtaSecondary }}
             </a>
+            <button
+                class="rounded-full border border-brandDark/25 text-brandDark hover:bg-brandDark/5 transition-all px-5 py-3 text-xs font-bold font-sans uppercase tracking-wider"
+                @click="locale = locale === 'en' ? 'es' : 'en'"
+                :aria-label="locale === 'en' ? 'Switch to Spanish' : 'Cambiar a inglés'"
+            >
+              <span v-if="locale === 'en'">ES</span>
+              <span v-else>EN</span>
+            </button>
           </div>
 
-          <button
-              class="rounded-xl border border-zinc-700/70 bg-zinc-100/5 px-3 py-2 text-xs font-medium text-zinc-600 hover:bg-zinc-100/10"
-              @click="locale = locale === 'en' ? 'es' : 'en'"
-              :aria-label="locale === 'en' ? 'Switch to Spanish' : 'Cambiar a inglés'"
-          >
-            <span v-if="locale === 'en'">ES</span>
-            <span v-else>EN</span>
-          </button>
-          <ul class="mt-8 space-y-2 text-sm font-zinc-600">
-            <li v-for="(p, i) in content.trustPoints" :key="i" class="flex gap-3">
-              <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-300/70"></span>
+          <ul class="space-y-3 pt-6 border-t border-brandDark/10 text-sm text-brandDark/85 font-sans">
+            <li v-for="(p, i) in content.trustPoints" :key="i" class="flex items-start gap-3">
+              <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brandDark/40"></span>
               <span>{{ p }}</span>
             </li>
           </ul>
         </div>
 
-        <!-- Right: “quiet luxury” card -->
-        <div class="md:pl-8">
-          <div class="rounded-none border-t border-zinc-200 bg-transparent p-6 md:p-8 ring-1 ring-zinc-700/30 m-auto align-center">
-            <div class="mt-8 space-y-3 text-sm text-zinc-600">
-              <p><strong>Consultation:</strong> $120–$180 USD</p>
-              <p><strong>Location:</strong> On-site in San Miguel de Allende</p>
-              <p><strong>Languages:</strong> English / Español</p>
+        <!-- Right Side: Clean summary card -->
+        <div class="md:pl-8 flex justify-center">
+          <div class="w-full max-w-md rounded-[32px] border border-brandDark/15 bg-white p-8 md:p-10 shadow-md text-center space-y-6">
+            <div class="space-y-1">
+              <h3 class="text-sm font-semibold tracking-wider text-brandDark/60 uppercase font-sans">Archival Service</h3>
+              <p class="text-2xl font-serif font-bold text-brandDark">San Miguel de Allende</p>
+            </div>
+            
+            <div class="space-y-4 text-sm text-brandDark/85 font-sans border-y border-brandDark/10 py-6 text-left">
+              <div class="flex justify-between">
+                <span class="font-medium text-brandDark/70">Consultation</span>
+                <span class="font-bold text-brandDark">$120–$180 USD</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="font-medium text-brandDark/70">Location</span>
+                <span class="font-bold text-brandDark">On-site (SMA)</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="font-medium text-brandDark/70">Bilingual support</span>
+                <span class="font-bold text-brandDark">English / Español</span>
+              </div>
             </div>
 
             <a
                 href="#contact"
-                class="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-100"
+                class="inline-flex w-full items-center justify-center rounded-full bg-brandDark text-brandBg hover:bg-brandDark/90 transition-all px-6 py-3.5 text-sm font-medium tracking-wide shadow-sm hover:shadow-md"
             >
               {{ content.heroCtaPrimary }}
             </a>
@@ -367,89 +380,103 @@ useHead(() => ({
     </section>
 
     <!-- Services / Packages -->
-    <section id="services" class="border-t border-zinc-900">
-      <div class="mx-auto max-w-6xl px-4 py-14">
-        <h2 class="text-2xl font-medium tracking-tight md:text-3xl">
-          {{ content.packagesTitle }}
-        </h2>
-        <p class="mt-3 max-w-3xl font-zinc-600">
-          {{ content.packagesSub }}
-        </p>
+    <section id="services" class="border-t border-brandDark/10 py-16 md:py-24 bg-brandBg/30">
+      <div class="mx-auto max-w-7xl px-6 md:px-12">
+        <header class="mb-12 text-center space-y-4">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-brandDark tracking-tight">
+            {{ content.packagesTitle }}
+          </h2>
+          <p class="text-base md:text-lg text-brandDark/70 max-w-3xl mx-auto font-sans leading-relaxed">
+            {{ content.packagesSub }}
+          </p>
+        </header>
 
-        <div id="packages" class="mt-10 grid gap-6 md:grid-cols-3">
-          <!-- Starter -->
-          <article class="rounded-3xl border border-zinc-800 bg-zinc-900/30 p-6 ring-1 ring-zinc-700/20">
-            <p class="text-xs font-medium tracking-wide text-zinc-400">
-              {{ content.pkg.starter.duration }}
-            </p>
-            <h3 class="mt-2 text-xl font-medium">{{ content.pkg.starter.title }}</h3>
-            <p class="mt-2 text-sm font-zinc-600">{{ content.pkg.starter.for }}</p>
+        <div id="packages" class="grid gap-8 grid-cols-1 md:grid-cols-3">
+          <!-- Starter (Yellow) -->
+          <article class="group bg-brandYellow rounded-[32px] border border-brandDark/15 p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col justify-between min-h-[460px]">
+            <div>
+              <p class="text-xs font-semibold text-brandDark/60 tracking-wider uppercase">
+                {{ content.pkg.starter.duration }}
+              </p>
+              <h3 class="mt-2 text-2xl font-serif font-bold text-brandDark">{{ content.pkg.starter.title }}</h3>
+              <p class="mt-2 text-sm text-brandDark/85 font-sans leading-relaxed">{{ content.pkg.starter.for }}</p>
 
-            <ul class="mt-5 space-y-2 text-sm font-zinc-600">
-              <li v-for="(b, i) in content.pkg.starter.bullets" :key="i" class="flex gap-3">
-                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-300/70"></span>
-                <span>{{ b }}</span>
-              </li>
-            </ul>
+              <ul class="mt-6 space-y-3 text-sm text-brandDark/85 font-sans">
+                <li v-for="(b, i) in content.pkg.starter.bullets" :key="i" class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brandDark/40"></span>
+                  <span>{{ b }}</span>
+                </li>
+              </ul>
+            </div>
 
-            <div class="mt-6 border-t border-zinc-800 pt-5">
-              <p class="mt-4 text-sm text-zinc-600">{{ locale === "en" ? "Typical range" : "Rango típico" }}</p>
-              <p class="text-base text-zinc-800">
+            <div class="mt-8 border-t border-brandDark/10 pt-5">
+              <p class="text-xs font-semibold uppercase tracking-wider text-brandDark/60 mb-1">
+                {{ locale === "en" ? "Typical cost" : "Costo típico" }}
+              </p>
+              <p class="text-lg font-serif font-bold text-brandDark">
                 ${{ money(pricing.starter.usd[0]) }}–${{ money(pricing.starter.usd[1]) }} USD
               </p>
-              <p class="text-base text-zinc-800">
+              <p class="text-sm font-semibold text-brandDark/70">
                 MXN ${{ money(pricing.starter.mxn[0]) }}–${{ money(pricing.starter.mxn[1]) }}
               </p>
             </div>
           </article>
 
-          <!-- Collector -->
-          <article class="rounded-3xl border border-zinc-800 bg-zinc-900/30 p-6 ring-1 ring-zinc-700/20">
-            <p class="text-xs font-medium tracking-wide text-zinc-400">
-              {{ content.pkg.collector.duration }}
-            </p>
-            <h3 class="mt-2 text-xl font-medium">{{ content.pkg.collector.title }}</h3>
-            <p class="mt-2 text-sm font-zinc-600">{{ content.pkg.collector.for }}</p>
+          <!-- Collector (Blue) -->
+          <article class="group bg-brandBlue rounded-[32px] border border-brandDark/15 p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col justify-between min-h-[460px]">
+            <div>
+              <p class="text-xs font-semibold text-brandDark/60 tracking-wider uppercase">
+                {{ content.pkg.collector.duration }}
+              </p>
+              <h3 class="mt-2 text-2xl font-serif font-bold text-brandDark">{{ content.pkg.collector.title }}</h3>
+              <p class="mt-2 text-sm text-brandDark/85 font-sans leading-relaxed">{{ content.pkg.collector.for }}</p>
 
-            <ul class="mt-5 space-y-2 text-sm font-zinc-600">
-              <li v-for="(b, i) in content.pkg.collector.bullets" :key="i" class="flex gap-3">
-                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-300/70"></span>
-                <span>{{ b }}</span>
-              </li>
-            </ul>
+              <ul class="mt-6 space-y-3 text-sm text-brandDark/85 font-sans">
+                <li v-for="(b, i) in content.pkg.collector.bullets" :key="i" class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brandDark/40"></span>
+                  <span>{{ b }}</span>
+                </li>
+              </ul>
+            </div>
 
-            <div class="mt-6 border-t border-zinc-800 pt-5">
-              <p class="mt-4 text-sm text-zinc-600">{{ locale === "en" ? "Typical range" : "Rango típico" }}</p>
-              <p class="text-base text-zinc-800">
+            <div class="mt-8 border-t border-brandDark/10 pt-5">
+              <p class="text-xs font-semibold uppercase tracking-wider text-brandDark/60 mb-1">
+                {{ locale === "en" ? "Typical cost" : "Costo típico" }}
+              </p>
+              <p class="text-lg font-serif font-bold text-brandDark">
                 ${{ money(pricing.collector.usd[0]) }}–${{ money(pricing.collector.usd[1]) }} USD
               </p>
-              <p class="text-base text-zinc-800">
+              <p class="text-sm font-semibold text-brandDark/70">
                 MXN ${{ money(pricing.collector.mxn[0]) }}–${{ money(pricing.collector.mxn[1]) }}
               </p>
             </div>
           </article>
 
-          <!-- Legacy -->
-          <article class="rounded-3xl border border-zinc-800 bg-zinc-900/30 p-6 ring-1 ring-zinc-700/20">
-            <p class="text-xs font-medium tracking-wide text-zinc-400">
-              {{ content.pkg.legacy.duration }}
-            </p>
-            <h3 class="mt-2 text-xl font-medium">{{ content.pkg.legacy.title }}</h3>
-            <p class="mt-2 text-sm font-zinc-600">{{ content.pkg.legacy.for }}</p>
+          <!-- Legacy (Purple) -->
+          <article class="group bg-brandPurple rounded-[32px] border border-brandDark/15 p-8 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col justify-between min-h-[460px]">
+            <div>
+              <p class="text-xs font-semibold text-brandDark/60 tracking-wider uppercase">
+                {{ content.pkg.legacy.duration }}
+              </p>
+              <h3 class="mt-2 text-2xl font-serif font-bold text-brandDark">{{ content.pkg.legacy.title }}</h3>
+              <p class="mt-2 text-sm text-brandDark/85 font-sans leading-relaxed">{{ content.pkg.legacy.for }}</p>
 
-            <ul class="mt-5 space-y-2 text-sm font-zinc-600">
-              <li v-for="(b, i) in content.pkg.legacy.bullets" :key="i" class="flex gap-3">
-                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-300/70"></span>
-                <span>{{ b }}</span>
-              </li>
-            </ul>
+              <ul class="mt-6 space-y-3 text-sm text-brandDark/85 font-sans">
+                <li v-for="(b, i) in content.pkg.legacy.bullets" :key="i" class="flex items-start gap-2">
+                  <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brandDark/40"></span>
+                  <span>{{ b }}</span>
+                </li>
+              </ul>
+            </div>
 
-            <div class="mt-6 border-t border-zinc-800 pt-5">
-              <p class="mt-4 text-sm text-zinc-600">{{ locale === "en" ? "Typical range" : "Rango típico" }}</p>
-              <p class="text-base text-zinc-800">
+            <div class="mt-8 border-t border-brandDark/10 pt-5">
+              <p class="text-xs font-semibold uppercase tracking-wider text-brandDark/60 mb-1">
+                {{ locale === "en" ? "Typical cost" : "Costo típico" }}
+              </p>
+              <p class="text-lg font-serif font-bold text-brandDark">
                 ${{ money(pricing.legacy.usd[0]) }}–${{ money(pricing.legacy.usd[1]) }} USD
               </p>
-              <p class="text-base text-zinc-800">
+              <p class="text-sm font-semibold text-brandDark/70">
                 MXN ${{ money(pricing.legacy.mxn[0]) }}–${{ money(pricing.legacy.mxn[1]) }}
               </p>
             </div>
@@ -458,86 +485,91 @@ useHead(() => ({
       </div>
     </section>
 
-    <!-- Pricing -->
-    <section id="pricing" class="border-t border-zinc-900">
-      <div class="mx-auto max-w-6xl px-4 py-14">
-        <h2 class="text-2xl font-medium tracking-tight md:text-3xl">
-          {{ content.pricingTitle }}
-        </h2>
-        <p class="mt-3 max-w-3xl font-zinc-600">
-          {{ content.pricingSub }}
-        </p>
+    <!-- Pricing / Details Guide -->
+    <section id="pricing" class="border-t border-brandDark/10 py-16 md:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-6 md:px-12">
+        <header class="mb-12 text-center space-y-4">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-brandDark tracking-tight">
+            {{ content.pricingTitle }}
+          </h2>
+          <p class="text-base md:text-lg text-brandDark/70 max-w-3xl mx-auto font-sans leading-relaxed">
+            {{ content.pricingSub }}
+          </p>
+        </header>
 
-        <div class="mt-8 grid gap-6 md:grid-cols-2">
-          <div class="rounded-3xl border border-zinc-800 bg-zinc-900/30 p-6">
-            <h3 class="text-lg font-medium">
+        <div class="grid gap-8 md:grid-cols-2">
+          <!-- Summary card -->
+          <div class="rounded-[32px] border border-brandDark/10 bg-brandBg/40 p-8 shadow-sm space-y-6">
+            <h3 class="text-xl font-serif font-bold text-brandDark border-b border-brandDark/10 pb-3">
               {{ locale === "en" ? "At-a-glance" : "Resumen" }}
             </h3>
 
-            <div class="mt-5 space-y-4 text-sm font-zinc-600">
-              <div class="flex items-start justify-between gap-6">
+            <div class="space-y-6 text-sm text-brandDark/85 font-sans">
+              <div class="flex items-start justify-between gap-6 border-b border-brandDark/10 pb-4">
                 <div>
-                  <p class="font-medium text-white">{{ locale === "en" ? "Consultation" : "Consulta" }}</p>
-                  <p class="text-zinc-400">{{ locale === "en" ? "Assessment + plan" : "Evaluación + plan" }}</p>
+                  <p class="font-bold text-brandDark">{{ locale === "en" ? "Consultation" : "Consulta" }}</p>
+                  <p class="text-brandDark/60 text-xs mt-0.5">{{ locale === "en" ? "Assessment + plan" : "Evaluación + plan" }}</p>
                 </div>
                 <div class="text-right">
-                  <p class="font-medium">${{ money(pricing.consult.usd[0]) }}–${{ money(pricing.consult.usd[1]) }}</p>
-                  <p class="text-zinc-400">MXN {{ money(pricing.consult.mxn[0]) }}–{{ money(pricing.consult.mxn[1]) }}</p>
+                  <p class="font-bold text-brandDark">${{ money(pricing.consult.usd[0]) }}–${{ money(pricing.consult.usd[1]) }}</p>
+                  <p class="text-brandDark/60 text-xs mt-0.5">MXN {{ money(pricing.consult.mxn[0]) }}–{{ money(pricing.consult.mxn[1]) }}</p>
+                </div>
+              </div>
+
+              <div class="flex items-start justify-between gap-6 border-b border-brandDark/10 pb-4">
+                <div>
+                  <p class="font-bold text-brandDark">{{ content.pkg.starter.title }}</p>
+                  <p class="text-brandDark/60 text-xs mt-0.5">{{ content.pkg.starter.duration }}</p>
+                </div>
+                <div class="text-right">
+                  <p class="font-bold text-brandDark">${{ money(pricing.starter.usd[0]) }}–${{ money(pricing.starter.usd[1]) }}</p>
+                  <p class="text-brandDark/60 text-xs mt-0.5">MXN {{ money(pricing.starter.mxn[0]) }}–{{ money(pricing.starter.mxn[1]) }}</p>
+                </div>
+              </div>
+
+              <div class="flex items-start justify-between gap-6 border-b border-brandDark/10 pb-4">
+                <div>
+                  <p class="font-bold text-brandDark">{{ content.pkg.collector.title }}</p>
+                  <p class="text-brandDark/60 text-xs mt-0.5">{{ content.pkg.collector.duration }}</p>
+                </div>
+                <div class="text-right">
+                  <p class="font-bold text-brandDark">${{ money(pricing.collector.usd[0]) }}–${{ money(pricing.collector.usd[1]) }}</p>
+                  <p class="text-brandDark/60 text-xs mt-0.5">MXN {{ money(pricing.collector.mxn[0]) }}–{{ money(pricing.collector.mxn[1]) }}</p>
                 </div>
               </div>
 
               <div class="flex items-start justify-between gap-6">
                 <div>
-                  <p class="font-medium text-white">{{ content.pkg.starter.title }}</p>
-                  <p class="text-zinc-400">{{ content.pkg.starter.duration }}</p>
+                  <p class="font-bold text-brandDark">{{ content.pkg.legacy.title }}</p>
+                  <p class="text-brandDark/60 text-xs mt-0.5">{{ content.pkg.legacy.duration }}</p>
                 </div>
                 <div class="text-right">
-                  <p class="font-medium">${{ money(pricing.starter.usd[0]) }}–${{ money(pricing.starter.usd[1]) }}</p>
-                  <p class="text-zinc-400">MXN {{ money(pricing.starter.mxn[0]) }}–{{ money(pricing.starter.mxn[1]) }}</p>
-                </div>
-              </div>
-
-              <div class="flex items-start justify-between gap-6">
-                <div>
-                  <p class="font-medium text-white">{{ content.pkg.collector.title }}</p>
-                  <p class="text-zinc-400">{{ content.pkg.collector.duration }}</p>
-                </div>
-                <div class="text-right">
-                  <p class="font-medium">${{ money(pricing.collector.usd[0]) }}–${{ money(pricing.collector.usd[1]) }}</p>
-                  <p class="text-zinc-400">MXN {{ money(pricing.collector.mxn[0]) }}–{{ money(pricing.collector.mxn[1]) }}</p>
-                </div>
-              </div>
-
-              <div class="flex items-start justify-between gap-6">
-                <div>
-                  <p class="font-medium text-white">{{ content.pkg.legacy.title }}</p>
-                  <p class="text-zinc-400">{{ content.pkg.legacy.duration }}</p>
-                </div>
-                <div class="text-right">
-                  <p class="font-medium">${{ money(pricing.legacy.usd[0]) }}–${{ money(pricing.legacy.usd[1]) }}</p>
-                  <p class="text-zinc-400">MXN {{ money(pricing.legacy.mxn[0]) }}–{{ money(pricing.legacy.mxn[1]) }}</p>
+                  <p class="font-bold text-brandDark">${{ money(pricing.legacy.usd[0]) }}–${{ money(pricing.legacy.usd[1]) }}</p>
+                  <p class="text-brandDark/60 text-xs mt-0.5">MXN {{ money(pricing.legacy.mxn[0]) }}–{{ money(pricing.legacy.mxn[1]) }}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="rounded-3xl border border-zinc-800 bg-zinc-900/30 p-6">
-            <h3 class="text-lg font-medium">
+          <!-- Notes card -->
+          <div class="rounded-[32px] border border-brandDark/10 bg-brandBg/40 p-8 shadow-sm space-y-6">
+            <h3 class="text-xl font-serif font-bold text-brandDark border-b border-brandDark/10 pb-3">
               {{ locale === "en" ? "Notes" : "Notas" }}
             </h3>
 
-            <ul class="mt-4 space-y-2 text-sm font-zinc-600">
-              <li v-for="(n, i) in content.pricingNotes" :key="i" class="flex gap-3">
-                <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-300/70"></span>
+            <ul class="space-y-4 text-sm text-brandDark/85 font-sans leading-relaxed">
+              <li v-for="(n, i) in content.pricingNotes" :key="i" class="flex items-start gap-3">
+                <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brandDark/40"></span>
                 <span>{{ n }}</span>
               </li>
             </ul>
 
-            <div class="mt-8 rounded-2xl border border-zinc-800 bg-zinc-950/40 p-5">
-              <p class="text-sm font-medium text-white">
+            <!-- Inner Callout Card -->
+            <div class="rounded-2xl border border-brandDark/15 bg-white p-6 shadow-sm space-y-4">
+              <p class="text-sm font-bold text-brandDark">
                 {{ locale === "en" ? "Want exact pricing?" : "¿Quiere un precio exacto?" }}
               </p>
-              <p class="mt-2 text-sm font-zinc-600">
+              <p class="text-sm text-brandDark/80 font-sans leading-relaxed">
                 {{ locale === "en"
                   ? "Send 3–5 photos of the materials + a one-paragraph goal. I’ll reply with a suggested package and a tighter estimate."
                   : "Envíe 3–5 fotos de los materiales + una meta en un párrafo. Le responderé con un paquete recomendado y una estimación más precisa."
@@ -545,7 +577,7 @@ useHead(() => ({
               </p>
               <a
                   href="#contact"
-                  class="mt-4 inline-flex items-center justify-center rounded-2xl bg-white px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-100"
+                  class="inline-flex items-center justify-center rounded-full bg-brandDark text-brandBg hover:bg-brandDark/90 transition px-5 py-2.5 text-xs font-semibold shadow-sm hover:shadow-md"
               >
                 {{ locale === "en" ? "Contact" : "Contacto" }}
               </a>
@@ -556,31 +588,36 @@ useHead(() => ({
     </section>
 
     <!-- Process -->
-    <section id="process" class="border-t border-zinc-900">
-      <div class="mx-auto max-w-6xl px-4 py-14">
-        <h2 class="text-2xl font-medium tracking-tight md:text-3xl">
+    <section id="process" class="border-t border-brandDark/10 py-16 md:py-24 bg-brandBg/30">
+      <div class="mx-auto max-w-7xl px-6 md:px-12">
+        <h2 class="text-3xl font-serif font-bold text-brandDark text-center tracking-tight mb-12">
           {{ content.processTitle }}
         </h2>
 
-        <div class="mt-8 grid gap-6 md:grid-cols-4">
+        <div class="grid gap-6 md:grid-cols-4">
           <div
               v-for="(s, i) in content.steps"
               :key="i"
-              class="rounded-3xl border border-zinc-800 bg-zinc-900/30 p-6"
+              class="rounded-[32px] border border-brandDark/15 bg-white p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition duration-300"
           >
-            <p class="text-xs font-medium tracking-wide text-zinc-400">
-              {{ locale === "en" ? "Step" : "Paso" }} {{ i + 1 }}
-            </p>
-            <p class="mt-2 font-medium text-white">{{ s.title }}</p>
-            <p class="mt-2 text-sm font-zinc-600">{{ s.desc }}</p>
+            <div>
+              <p class="text-xs font-semibold text-brandDark/60 tracking-wider uppercase">
+                {{ locale === "en" ? "Step" : "Paso" }} {{ i + 1 }}
+              </p>
+              <p class="mt-2 text-lg font-serif font-bold text-brandDark">{{ s.title }}</p>
+            </div>
+            <p class="mt-4 text-sm text-brandDark/80 leading-relaxed font-sans">{{ s.desc }}</p>
           </div>
         </div>
 
-        <div class="mt-10 rounded-3xl border border-zinc-800 bg-zinc-900/30 p-6">
-          <h3 class="text-lg font-medium">{{ content.addOnsTitle }}</h3>
-          <ul class="mt-4 grid gap-2 text-sm font-zinc-600 md:grid-cols-2">
-            <li v-for="(a, i) in content.addOns" :key="i" class="flex gap-3">
-              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-300/70"></span>
+        <!-- Add-ons Box -->
+        <div class="mt-10 rounded-[32px] border border-brandDark/15 bg-white p-8 shadow-sm space-y-6">
+          <h3 class="text-xl font-serif font-bold text-brandDark border-b border-brandDark/10 pb-3">
+            {{ content.addOnsTitle }}
+          </h3>
+          <ul class="grid gap-4 text-sm text-brandDark/85 font-sans md:grid-cols-2">
+            <li v-for="(a, i) in content.addOns" :key="i" class="flex items-start gap-3">
+              <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brandDark/40"></span>
               <span>{{ a }}</span>
             </li>
           </ul>
@@ -589,91 +626,36 @@ useHead(() => ({
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="border-t border-zinc-900">
-      <div class="mx-auto max-w-6xl px-4 py-14">
-        <h2 class="text-2xl font-medium tracking-tight md:text-3xl">
+    <section id="faq" class="border-t border-brandDark/10 py-16 md:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-6 md:px-12">
+        <h2 class="text-3xl font-serif font-bold text-brandDark text-center tracking-tight mb-12">
           {{ content.faqTitle }}
         </h2>
 
-        <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="grid gap-6 md:grid-cols-2">
           <details
               v-for="(f, i) in content.faqs"
               :key="i"
-              class="group rounded-3xl border border-zinc-800 bg-zinc-900/30 p-6"
+              class="group rounded-2xl border border-brandDark/10 bg-brandBg/20 p-6 hover:bg-brandBg/40 transition duration-200"
           >
-            <summary class="cursor-pointer list-none font-medium text-white">
+            <summary class="cursor-pointer list-none font-serif font-bold text-brandDark focus:outline-none">
               <span class="flex items-start justify-between gap-6">
                 <span>{{ f.q }}</span>
-                <span class="text-zinc-400 group-open:rotate-45 transition">+</span>
+                <span class="text-brandDark/60 group-open:rotate-45 transition-transform duration-200">+</span>
               </span>
             </summary>
-            <p class="mt-3 text-sm leading-relaxed font-zinc-600">{{ f.a }}</p>
+            <p class="mt-3 text-sm leading-relaxed text-brandDark/80 font-sans">{{ f.a }}</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="border-t border-zinc-900">
-      <div class="mx-auto max-w-6xl px-4 py-14">
-        <div class="rounded-3xl border border-zinc-800 bg-zinc-900/30 p-8 md:p-10">
-          <h2 class="text-2xl font-medium tracking-tight md:text-3xl">
-            {{ content.contactTitle }}
-          </h2>
-          <p class="mt-3 max-w-2xl font-zinc-600">
-            {{ content.contactSub }}
-          </p>
-
-          <div class="mt-8 grid gap-6 md:grid-cols-3">
-            <div class="rounded-2xl border border-zinc-800 bg-zinc-950/30 p-5">
-              <p class="text-xs font-medium tracking-wide text-zinc-400">
-                {{ content.contact.phoneLabel }}
-              </p>
-              <a class="mt-2 block text-lg font-medium hover:underline" href="tel:+13232707263">
-                +1 (323) 270-7263
-              </a>
-            </div>
-
-            <div class="rounded-2xl border border-zinc-800 bg-zinc-950/30 p-5">
-              <p class="text-xs font-medium tracking-wide text-zinc-400">
-                {{ content.contact.emailLabel }}
-              </p>
-              <a class="mt-2 block text-lg font-medium hover:underline" href="mailto:payanjenndifer9@gmail.com">
-                payanjennifer9@gmail.com
-              </a>
-            </div>
-
-            <div class="rounded-2xl border border-zinc-800 bg-zinc-950/30 p-5">
-              <p class="text-xs font-medium tracking-wide text-zinc-400">
-                {{ locale === "en" ? "Availability" : "Disponibilidad" }}
-              </p>
-              <p class="mt-2 text-sm font-zinc-600">
-                {{ content.contact.location }}
-              </p>
-            </div>
-          </div>
-
-          <div class="mt-8 flex flex-wrap items-center gap-3">
-            <a
-                class="rounded-2xl bg-white px-5 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-100"
-                href="mailto:payanjennifer9@gmail.com?subject=San%20Miguel%20Archive%20Consultation"
-            >
-              {{ content.contact.cta }}
-            </a>
-
-            <p class="text-xs text-zinc-400">
-              {{ locale === "en"
-                ? "Tip: include 3–5 photos of materials + your main goal."
-                : "Tip: incluya 3–5 fotos de los materiales + su meta principal."
-              }}
-            </p>
-          </div>
-        </div>
-
-        <footer class="mt-10 pb-10 text-center text-xs text-zinc-500">
-          {{ content.footer }}
-        </footer>
-      </div>
-    </section>
   </div>
 </template>
+
+<style scoped>
+/* standard smooth transition for open/close faq details */
+details[open] summary span span:last-child {
+  transform: rotate(45deg);
+}
+</style>

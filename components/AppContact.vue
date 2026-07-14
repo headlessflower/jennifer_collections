@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full">
+  <section id="contact" class="w-full">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
       <header class="mb-8 text-center">
         <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">
