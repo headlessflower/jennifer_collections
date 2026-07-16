@@ -24,9 +24,9 @@
           <!-- Proof: overlapping avatars -->
           <div class="flex items-center gap-3">
             <div class="flex -space-x-3">
-              <img src="/jenny_exp_1.webp" alt="Archive Work" class="w-10 h-10 rounded-full border-2 border-brandBg object-cover" />
-              <img src="/jenny_exp_3.webp" alt="Museum Work" class="w-10 h-10 rounded-full border-2 border-brandBg object-cover" />
-              <img src="/jenny_exp_4.webp" alt="Art Conservation" class="w-10 h-10 rounded-full border-2 border-brandBg object-cover" />
+              <NuxtImg src="/jenny_exp_1.webp" alt="Archive Work" class="w-10 h-10 rounded-full border-2 border-brandBg object-cover" width="40" height="40" format="webp" loading="eager" />
+              <NuxtImg src="/jenny_exp_3.webp" alt="Museum Work" class="w-10 h-10 rounded-full border-2 border-brandBg object-cover" width="40" height="40" format="webp" loading="eager" />
+              <NuxtImg src="/jenny_exp_4.webp" alt="Art Conservation" class="w-10 h-10 rounded-full border-2 border-brandBg object-cover" width="40" height="40" format="webp" loading="eager" />
             </div>
             <div class="text-xs font-semibold text-brandDark/70 tracking-wide">
               Trusted by SoCal institutions
@@ -46,10 +46,15 @@
         <div class="relative w-[300px] h-[380px] sm:w-[340px] sm:h-[430px] flex-shrink-0">
           <!-- Arch Image Wrapper -->
           <div class="w-full h-full rounded-t-[170px] overflow-hidden border border-brandDark/15 shadow-xl bg-neutral-200">
-            <img 
+            <NuxtImg 
               src="/profile-pic-1.JPEG" 
               alt="Jennifer Payan Portrait" 
               class="w-full h-full object-cover object-center scale-[1.02] hover:scale-105 transition-transform duration-500 ease-out" 
+              format="webp"
+              quality="80"
+              sizes="sm:300px md:340px"
+              loading="eager"
+              fetchpriority="high"
             />
           </div>
           

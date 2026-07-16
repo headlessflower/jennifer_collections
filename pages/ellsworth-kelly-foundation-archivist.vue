@@ -14,10 +14,15 @@
                 class="rounded-2xl overflow-hidden border border-foreground/10 shadow-sm"
             >
                 <div class="relative">
-                    <img
+                    <NuxtImg
                         :src="project.hero.src"
                         :alt="project.hero.alt"
                         class="h-72 sm:h-96 w-full object-cover"
+                        format="webp"
+                        quality="80"
+                        sizes="sm:100vw md:896px"
+                        loading="eager"
+                        fetchpriority="high"
                     />
                     <!-- Optional overlay for readability -->
                     <div
@@ -86,10 +91,14 @@
                 class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
          w-full max-w-5xl mx-auto overflow-hidden"
             >
-                <img
-                    src="/ellsworth-4.png"
+                <NuxtImg
+                    src="/images/ellsworth/ellsworth-4.png"
                     alt="Jennifer standing in Ellsworth's Studio"
                     class="w-full h-auto object-contain"
+                    format="webp"
+                    quality="80"
+                    sizes="sm:100vw md:800px"
+                    loading="lazy"
                 />
             </figure>
 
@@ -146,10 +155,14 @@
                 class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
          w-full max-w-5xl mx-auto overflow-hidden"
             >
-                <img
-                    src="/ellsworth-2.png"
+                <NuxtImg
+                    src="/images/ellsworth/ellsworth-2.png"
                     alt="Jennifer entering artifact information into the database.  "
                     class="w-full h-auto object-contain"
+                    format="webp"
+                    quality="80"
+                    sizes="sm:100vw md:800px"
+                    loading="lazy"
                 />
             </figure>
 
@@ -222,10 +235,14 @@
                 class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
          w-full max-w-5xl mx-auto overflow-hidden"
             >
-                <img
-                    src="/ellsworth-project-4.png"
+                <NuxtImg
+                    src="/images/ellsworth/ellsworth-project-4.png"
                     alt="Data table with project progress"
                     class="w-full h-auto object-contain"
+                    format="webp"
+                    quality="80"
+                    sizes="sm:100vw md:800px"
+                    loading="lazy"
                 />
             </figure>
 
@@ -346,7 +363,7 @@ const project = defaults[slug] ?? {
     shortDescription:
         "Carlson Fabrication in Los Angeles produced Ellsworth Kelly’s sculptures beginning in 1977 and also handled conservation and restoration of works fabricated by both Carlson and Lippincott. After the studio closed in 2023, its sculpture files were transferred to the Ellsworth Kelly Studio. These records will support future conservators in understanding fabrication methods and past treatments. Summer interns are digitizing each Carlson Sculpture File and applying established Digital File Naming Conventions to ensure long-term remote access and research use.",
     hero: {
-        src: "ellsworth-project-1.png",
+        src: "/images/ellsworth/ellsworth-project-1.png",
         alt: "Image of Ellsworth Kelly Studio totems",
     },
 };

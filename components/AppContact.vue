@@ -49,7 +49,8 @@
               <span class="mt-1 size-1.5 rounded-full bg-foreground/40"></span>
               <div>
                 <dt class="font-medium">Based in</dt>
-                <dd class="opacity-80">Los Angeles, CA</dd>
+                <dd class="opacity-80">Los Angeles, USA</dd>
+                <dd class="opacity-80">San Miguel de Allende, MX</dd>
               </div>
             </div>
 

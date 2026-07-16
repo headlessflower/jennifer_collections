@@ -2,6 +2,7 @@
 <template>
     <div>
         <AppHero />
+        <LogoBanner />
         <About/>
         <AppServices />
         <AppProcess />

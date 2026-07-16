@@ -48,10 +48,12 @@
           class="flex flex-col md:flex-row gap-6 w-full md:h-[400px]">
           <NuxtLink v-for="photo in row" :key="photo.id" :to="`/gallery/${photo.id}`"
             class="flex-1 md:hover:flex-[2.2] h-[260px] md:h-full transition-all duration-500 ease-out relative group overflow-hidden rounded-[24px] border border-brandDark/10 shadow-sm hover:shadow-md cursor-pointer bg-neutral-200">
-            <!-- Background Image -->
-            <img :src="photo.imageUrl" :alt="photo.imageAlt"
+            <NuxtImg :src="photo.imageUrl" :alt="photo.imageAlt"
               class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-              loading="lazy" />
+              loading="lazy"
+              format="webp"
+              quality="80"
+              sizes="sm:100vw md:50vw lg:400px" />
 
             <!-- Dark Gradient Overlay -->
             <div

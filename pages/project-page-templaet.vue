@@ -9,10 +9,15 @@
 
       <div class="rounded-2xl overflow-hidden border border-foreground/10 shadow-sm">
         <div class="relative">
-          <img
+          <NuxtImg
               :src="project.hero.src"
               :alt="project.hero.alt"
               class="h-72 sm:h-96 w-full object-cover"
+              format="webp"
+              quality="80"
+              sizes="sm:100vw md:896px"
+              loading="eager"
+              fetchpriority="high"
           />
           <!-- Optional overlay for readability -->
           <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-black/0"></div>

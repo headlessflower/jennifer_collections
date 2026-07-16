@@ -12,10 +12,15 @@
           </p>
         </div>
         <div class="rounded-[32px] border border-brandDark/15 overflow-hidden shadow-md">
-          <img
-            src="/ellsworth-2.png"
+          <NuxtImg
+            src="/images/ellsworth/ellsworth-2.png"
             alt="Reading room with archival boxes"
             class="w-full h-auto object-cover"
+            format="webp"
+            quality="80"
+            sizes="sm:100vw md:50vw lg:600px"
+            loading="eager"
+            fetchpriority="high"
           />
         </div>
       </div>

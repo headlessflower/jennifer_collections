@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const images = [
-  { src: "/images/dominguez-1.png", thumb: "/images/dominguez-1.png", alt: "One", caption: "Caption 1" },
-  { src: "/ellsworth-1.png", thumb: "/ellsworth-1.png", alt: "Two" },
-  { src: "/olvera-st-1.png", thumb: "/olvera-st-1.png", alt: "Three" },
+  { src: "/images/dominguez/dominguez-1.png", thumb: "/images/dominguez/dominguez-1.png", alt: "One", caption: "Caption 1" },
+  { src: "/images/ellsworth/ellsworth-1.png", thumb: "/images/ellsworth/ellsworth-1.png", alt: "Two" },
+  { src: "/images/blessings_animals/olvera-st-1.png", thumb: "/images/blessings_animals/olvera-st-1.png", alt: "Three" },
 ];
 
 

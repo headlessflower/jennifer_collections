@@ -15,10 +15,15 @@
                 class="rounded-2xl overflow-hidden border border-foreground/10 shadow-sm"
             >
                 <div class="relative">
-                    <img
+                    <NuxtImg
                         :src="project.hero.src"
                         :alt="project.hero.alt"
                         class="w-full max-h-[80vh] object-contain rounded-2xl"
+                        format="webp"
+                        quality="80"
+                        sizes="sm:100vw md:896px"
+                        loading="eager"
+                        fetchpriority="high"
                     />
                     <!-- Optional overlay for readability -->
                     <div
@@ -45,9 +50,10 @@
             <article class="prose prose-neutral dark:prose-invert max-w-none">
                 <h2>Overview</h2>
                 <p>
-                    [Placeholder] Write a concise overview of the project scope,
-                    goals, partners, and your role. Mention location, dates, and
-                    any relevant context that frames the work.
+                    Paul Botello’s <em>Inner Resources</em> mural was created in 2000. The mural is one of the largest in Los Angeles and is part of the LA County Civic Art Collection.
+                </p>
+                <p>
+                    The Los Angeles County Department of Arts and Culture (Arts and Culture)’s Civic Art Division, has contracted Site & Studio Conservation to perform conservation of the <em>Inner Resources</em> mural, located in City Terrace Park (1126 N Hazard Ave, Los Angeles, CA 90063). One of the largest murals in Los Angeles, <em>Inner Resources</em> celebrates East Los Angeles culture, nature, and education. The contract with Site & Studio Conservation includes opportunities for four emerging conservators and/or artists to participate in the conservation.
                 </p>
             </article>
 
@@ -57,28 +63,23 @@
          w-full max-w-5xl mx-auto overflow-hidden"
             >
                 <span class="text-sm">
-                    <img
-                        src="/dominguez-1.png"
+                    <NuxtImg
+                        src="/images/dominguez/dominguez-1.png"
                         alt="Data table with project progress"
                         class="w-full h-auto object-contain"
+                        format="webp"
+                        quality="80"
+                        sizes="sm:100vw md:800px"
+                        loading="lazy"
                     />
                 </span>
             </figure>
 
             <!-- Section 1 -->
-            <article
-                class="prose prose-neutral dark:prose-invert max-w-none mt-8"
-            >
-                <h2>Research & Preparation</h2>
+            <article class="prose prose-neutral dark:prose-invert max-w-none mt-8">
+                <h2>What is Art Conservation?</h2>
                 <p>
-                    [Placeholder] Describe preliminary research, assessment, and
-                    planning. Include methods, stakeholders, and any standards
-                    followed (e.g., DACS, NAGPRA, AIC guidelines).
-                </p>
-                <p>
-                    [Placeholder] Note tools, materials, and workflows used.
-                    Capture challenges or constraints and how you addressed
-                    them.
+                    Art Conservation is a profession devoted to the care of art and items of cultural significance through research, examination, documentation, treatment, preventive care, and education.
                 </p>
             </article>
 
@@ -88,31 +89,28 @@
          w-full max-w-5xl mx-auto overflow-hidden"
             >
                 <span class="text-sm"
-                    ><img
-                        src="/dominguez-2.png"
+                    ><NuxtImg
+                        src="/images/dominguez/dominguez-2.png"
                         alt="painting dragon scales"
                         class="w-full h-auto object-contain"
+                        format="webp"
+                        quality="80"
+                        sizes="sm:100vw md:800px"
+                        loading="lazy"
                 /></span>
             </figure>
 
             <!-- Section 2 -->
-            <article
-                class="prose prose-neutral dark:prose-invert max-w-none mt-8"
-            >
-                <h2>Execution & Process</h2>
+            <article class="prose prose-neutral dark:prose-invert max-w-none mt-8">
+                <h2>Who is Conserving the Mural?</h2>
                 <p>
-                    [Placeholder] Detail step-by-step work: handling,
-                    stabilization, cataloging, digitization, conservation tasks,
-                    documentation, metadata, or public engagement.
+                    A group of conservators, technicians, and apprentices led by Site & Studio Conservation are working together along with the artist, Paul Botello, to conserve the mural.
                 </p>
                 <p>
-                    [Placeholder] Include measurable outcomes (items processed,
-                    treatments completed, metadata fields added, storage
-                    upgrades, etc.).
+                    The Los Angeles County Department of Arts and Culture, in collaboration with the First Supervisorial District and Department of Parks and Recreation, are funding and managing the project to ensure the mural is preserved.
                 </p>
             </article>
 
-            <!-- Image placeholder -->
             <figure
                 class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
          w-full max-w-5xl mx-auto overflow-hidden"
@@ -123,16 +121,17 @@
             </figure>
 
             <!-- Section 3 -->
-            <article
-                class="prose prose-neutral dark:prose-invert max-w-none mt-8"
-            >
-                <h2>Impact & Reflection</h2>
+            <article class="prose prose-neutral dark:prose-invert max-w-none mt-8">
+                <h2>What are the Conservators Doing?</h2>
                 <p>
-                    [Placeholder] Summarize impact: improved access,
-                    preservation outcomes, community benefits, or
-                    exhibition/readiness. Reflect on lessons learned and future
-                    recommendations.
+                    The conservation work involves executing on-site treatments to preserve and restore the mural. This includes:
                 </p>
+                <ul class="list-disc pl-6 space-y-2 mt-4">
+                    <li>Performing thorough surface cleaning to remove accumulated dirt, grime, and environmental accretions.</li>
+                    <li>Stabilizing flaking and blistering paint layers to prevent further paint loss.</li>
+                    <li>Documenting condition assessments and conservation steps for long-term records.</li>
+                    <li>Fostering public engagement and mentorship opportunities for emerging conservators and local artists.</li>
+                </ul>
             </article>
 
             <!-- Meta footer -->

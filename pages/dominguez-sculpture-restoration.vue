@@ -15,10 +15,15 @@
                 class="rounded-2xl overflow-hidden border border-foreground/10 shadow-sm"
             >
                 <div class="relative">
-                    <img
+                    <NuxtImg
                         :src="project.hero.src"
                         :alt="project.hero.alt"
                         class="h-72 sm:h-96 w-full object-cover"
+                        format="webp"
+                        quality="80"
+                        sizes="sm:100vw md:896px"
+                        loading="eager"
+                        fetchpriority="high"
                     />
                     <!-- Optional overlay for readability -->
                     <div
@@ -45,9 +50,7 @@
             <article class="prose prose-neutral dark:prose-invert max-w-none">
                 <h2>Overview</h2>
                 <p>
-                    [Placeholder] Write a concise overview of the project scope,
-                    goals, partners, and your role. Mention location, dates, and
-                    any relevant context that frames the work.
+                    Benjamin Dominguez’ fantastical sculptures—Tripod, Fish, Mother Dragon, Octopus, Two-Headed Dragon, and Starfish—were created in 1961 for the Whittier Narrows Recreation Area. They are highly beloved artworks in the LA County Civic Art Collection.
                 </p>
             </article>
 
@@ -57,27 +60,22 @@
          w-full max-w-5xl mx-auto overflow-hidden"
             >
                 <span class="text-sm"
-                    ><img
-                        src="/dominguez-1.png"
+                    ><NuxtImg
+                        src="/images/dominguez/dominguez-1.png"
                         alt="painting dragon scales"
                         class="w-full h-auto object-contain"
+                        format="webp"
+                        quality="80"
+                        sizes="sm:100vw md:800px"
+                        loading="lazy"
                 /></span>
             </figure>
 
             <!-- Section 1 -->
-            <article
-                class="prose prose-neutral dark:prose-invert max-w-none mt-8"
-            >
-                <h2>Research & Preparation</h2>
+            <article class="prose prose-neutral dark:prose-invert max-w-none mt-8">
+                <h2>What is Art Conservation?</h2>
                 <p>
-                    [Placeholder] Describe preliminary research, assessment, and
-                    planning. Include methods, stakeholders, and any standards
-                    followed (e.g., DACS, NAGPRA, AIC guidelines).
-                </p>
-                <p>
-                    [Placeholder] Note tools, materials, and workflows used.
-                    Capture challenges or constraints and how you addressed
-                    them.
+                    Art Conservation is a profession devoted to the care of art and items of cultural significance through research, examination, documentation, treatment, preventive care, and education.
                 </p>
             </article>
 
@@ -87,31 +85,25 @@
          w-full max-w-5xl mx-auto overflow-hidden"
             >
                 <span class="text-sm"
-                    ><img
-                        src="/dominguez-2.png"
+                    ><NuxtImg
+                        src="/images/dominguez/dominguez-2.png"
                         alt="painting dragon scales"
                         class="w-full h-auto object-contain"
+                        format="webp"
+                        quality="80"
+                        sizes="sm:100vw md:800px"
+                        loading="lazy"
                 /></span>
             </figure>
 
             <!-- Section 2 -->
-            <article
-                class="prose prose-neutral dark:prose-invert max-w-none mt-8"
-            >
-                <h2>Execution & Process</h2>
+            <article class="prose prose-neutral dark:prose-invert max-w-none mt-8">
+                <h2>Who is Conserving the Sculptures?</h2>
                 <p>
-                    [Placeholder] Detail step-by-step work: handling,
-                    stabilization, cataloging, digitization, conservation tasks,
-                    documentation, metadata, or public engagement.
-                </p>
-                <p>
-                    [Placeholder] Include measurable outcomes (items processed,
-                    treatments completed, metadata fields added, storage
-                    upgrades, etc.).
+                    A group of conservators, technicians, and apprentices led by Site & Studio Conservation are working together to conserve the sculptures. The Los Angeles County Department of Arts and Culture, in collaboration with the First Supervisorial District and Department of Parks and Recreation, are funding and managing the project to ensure the sculptures are preserved.
                 </p>
             </article>
 
-            <!-- Image placeholder -->
             <figure
                 class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
          w-full max-w-5xl mx-auto overflow-hidden"
@@ -122,16 +114,26 @@
             </figure>
 
             <!-- Section 3 -->
-            <article
-                class="prose prose-neutral dark:prose-invert max-w-none mt-8"
-            >
-                <h2>Impact & Reflection</h2>
+            <article class="prose prose-neutral dark:prose-invert max-w-none mt-8">
+                <h2>What is the State of the Artworks?</h2>
                 <p>
-                    [Placeholder] Summarize impact: improved access,
-                    preservation outcomes, community benefits, or
-                    exhibition/readiness. Reflect on lessons learned and future
-                    recommendations.
+                    While the sculptures are generally structurally sound—due to ongoing conservation and maintenance—they exhibit significant wear and tear to the painted surface. The conditions observed are due to the fact that the objects were created to be interacted with by children and are popular play structures. The regular physical interactions have caused abrasion, paint loss, loss of concrete, and graffiti.
                 </p>
+            </article>
+
+            <!-- Section 4 -->
+            <article class="prose prose-neutral dark:prose-invert max-w-none mt-8">
+                <h2>What are the Conservators Doing?</h2>
+                <p>
+                    To restore and preserve the sculptures, the conservation team is executing the following actions:
+                </p>
+                <ul class="list-disc pl-6 space-y-2 mt-4">
+                    <li>Cleaning and removal of graffiti.</li>
+                    <li>Stabilization and strengthening of original concrete using a consolidant.</li>
+                    <li>Application of concrete repair materials.</li>
+                    <li>Restoration of the painted surface.</li>
+                    <li>Application of an anti-graffiti coating.</li>
+                </ul>
             </article>
 
             <!-- Meta footer -->
@@ -218,9 +220,9 @@ const project = defaults[slug] ?? {
     slug,
     title: "Benjamin Dominguez Conservation Project",
     shortDescription:
-        "Preservation of sculptures created by Benjamin Dominguez. These sculptures are located at Whittier Narrows in El Monte, California.",
+        "Conservation and structural stabilization of Benjamin Dominguez’s 1961 concrete play sculptures at Whittier Narrows Recreation Area.",
     hero: {
-        src: "/dominguez-thumbnail.png",
+        src: "/images/dominguez/dominguez-thumbnail.png",
         alt: "Jennifer using dry brush to clean loose debris from sculpture",
     },
 };

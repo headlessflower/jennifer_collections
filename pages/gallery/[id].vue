@@ -64,10 +64,15 @@
           <!-- Image column (Spans 7 columns on desktop) -->
           <div class="lg:col-span-7 space-y-4">
             <div class="rounded-[32px] overflow-hidden border border-brandDark/15 shadow-md bg-neutral-200">
-              <img 
+              <NuxtImg 
                 :src="photo.imageUrl" 
                 :alt="photo.imageAlt"
                 class="w-full h-auto max-h-[70vh] object-contain mx-auto"
+                format="webp"
+                quality="80"
+                sizes="sm:100vw lg:800px"
+                loading="eager"
+                fetchpriority="high"
               />
             </div>
             <p v-if="photo.photographer" class="text-xs text-brandDark/50 italic text-right px-4">
@@ -159,11 +164,14 @@
               class="group bg-brandBg border border-brandDark/10 rounded-[24px] overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col h-full"
             >
               <div class="aspect-[4/3] w-full overflow-hidden bg-neutral-200 border-b border-brandDark/10">
-                <img 
+                <NuxtImg 
                   :src="related.imageUrl" 
                   :alt="related.imageAlt"
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
+                  format="webp"
+                  quality="80"
+                  sizes="sm:100vw md:50vw lg:250px"
                 />
               </div>
               <div class="p-5 flex-1 flex flex-col justify-between space-y-4">

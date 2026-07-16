@@ -20,7 +20,7 @@
         </div>
 
         <div class="mt-8 flex justify-center">
-          <a href="/payanjresume2025.pdf" target="_blank"
+          <a href="/jenniferpayanresume2026.pdf" target="_blank"
             class="inline-flex items-center justify-center bg-brandDark text-brandBg hover:bg-brandDark/90 transition-all duration-300 px-8 py-3.5 rounded-full text-sm font-medium tracking-wide shadow-sm hover:shadow-md"
             download>
             Download Resume PDF &rarr;

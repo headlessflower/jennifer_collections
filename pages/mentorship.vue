@@ -11,7 +11,7 @@
       
       <!-- Hero Image: profile-pic-1 -->
       <div class="max-w-xl mx-auto rounded-[32px] border border-brandDark/15 overflow-hidden shadow-md">
-        <img src="/profile-pic-1.JPEG" alt="Jennifer Payan — Mentorship & Guidance" class="w-full h-auto object-cover" />
+        <NuxtImg src="/profile-pic-1.JPEG" alt="Jennifer Payan — Mentorship & Guidance" class="w-full h-auto object-cover" format="webp" quality="80" sizes="sm:100vw md:576px" loading="eager" fetchpriority="high" />
       </div>
 
       <div class="pt-4">

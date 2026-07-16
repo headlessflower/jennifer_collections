@@ -29,16 +29,16 @@
             <!-- Image Row with borders & soft shadow -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                 <div class="rounded-[24px] border border-brandDark/10 overflow-hidden shadow-sm hover:shadow-md transition duration-300">
-                    <img src="/ellsworth-1.png" alt="Collections Management" class="object-cover w-full h-48 hover:scale-105 transition-transform duration-500" />
+                    <NuxtImg src="/images/ellsworth/ellsworth-1.png" alt="Collections Management" class="object-cover w-full h-48 hover:scale-105 transition-transform duration-500" format="webp" quality="80" sizes="sm:50vw lg:280px" loading="lazy" />
                 </div>
                 <div class="rounded-[24px] border border-brandDark/10 overflow-hidden shadow-sm hover:shadow-md transition duration-300">
-                    <img src="/ellsworth-2.png" alt="Archival Research" class="object-cover w-full h-48 hover:scale-105 transition-transform duration-500" />
+                    <NuxtImg src="/images/ellsworth/ellsworth-2.png" alt="Archival Research" class="object-cover w-full h-48 hover:scale-105 transition-transform duration-500" format="webp" quality="80" sizes="sm:50vw lg:280px" loading="lazy" />
                 </div>
                 <div class="rounded-[24px] border border-brandDark/10 overflow-hidden shadow-sm hover:shadow-md transition duration-300">
-                    <img src="/ellsworth-3.png" alt="Digital Preservation" class="object-cover w-full h-48 hover:scale-105 transition-transform duration-500" />
+                    <NuxtImg src="/images/ellsworth/ellsworth-3.png" alt="Digital Preservation" class="object-cover w-full h-48 hover:scale-105 transition-transform duration-500" format="webp" quality="80" sizes="sm:50vw lg:280px" loading="lazy" />
                 </div>
                 <div class="rounded-[24px] border border-brandDark/10 overflow-hidden shadow-sm hover:shadow-md transition duration-300">
-                    <img src="/ellsworth-4.png" alt="Consulting & Training" class="object-cover w-full h-48 hover:scale-105 transition-transform duration-500" />
+                    <NuxtImg src="/images/ellsworth/ellsworth-4.png" alt="Consulting & Training" class="object-cover w-full h-48 hover:scale-105 transition-transform duration-500" format="webp" quality="80" sizes="sm:50vw lg:280px" loading="lazy" />
                 </div>
             </div>
 

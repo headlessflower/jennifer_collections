@@ -21,11 +21,14 @@
             <div>
               <!-- Image -->
               <div class="overflow-hidden h-52 w-full border-b border-brandDark/10 bg-neutral-200">
-                <img
+                <NuxtImg
                     :src="project.image"
                     :alt="project.imageAlt"
                     class="h-full w-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
                     loading="lazy"
+                    format="webp"
+                    quality="80"
+                    sizes="sm:100vw md:50vw lg:350px"
                 />
               </div>
 
@@ -90,7 +93,7 @@ const projects: ProjectCard[] = [
     description:
         "Library & archives internship: processing, digitization, metadata, and support for an artist monograph library.",
     href: "/ellsworth-kelly-foundation-archivist",
-    image: "/ellsworth-5.png",
+    image: "/images/ellsworth/ellsworth-5.png",
     imageAlt: "Archival shelves with boxes and monographs."
   },
   {
@@ -99,7 +102,7 @@ const projects: ProjectCard[] = [
     description:
         "Public art conservation assisting with documentation, surface stabilization, and community-engaged preservation.",
     href: "/dominguez-sculpture-restoration",
-    image: "/dominguez-thumbnail.png",
+    image: "/images/dominguez/dominguez-thumbnail.png",
     imageAlt: "Outdoor sculpture under restoration with scaffolding."
   },
   {
@@ -108,7 +111,7 @@ const projects: ProjectCard[] = [
     description:
         "Public art conservation assisting with mural clean up and restoration.",
     href: "/blessing-animals-mural-olvera-street",
-    image: "/jennifer_olvera-street.JPG",
+    image: "/images/blessings_animals/jennifer_olvera-street.JPG",
     imageAlt: "Outdoor sculpture under restoration with scaffolding."
   },
 ]

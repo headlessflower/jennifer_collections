@@ -9,10 +9,15 @@
 
       <div class="rounded-2xl overflow-hidden border border-foreground/10 shadow-sm">
         <div class="relative">
-          <img
+          <NuxtImg
               :src="project.hero.src"
               :alt="project.hero.alt"
               class="h-72 sm:h-96 w-full object-cover"
+              format="webp"
+              quality="80"
+              sizes="sm:100vw md:896px"
+              loading="eager"
+              fetchpriority="high"
           />
           <!-- Optional overlay for readability -->
           <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-black/0"></div>
@@ -35,34 +40,39 @@
       <article class="prose prose-neutral dark:prose-invert max-w-none">
         <h2>Overview</h2>
         <p>
-          [Placeholder] Write a concise overview of the project scope, goals, partners, and your role.
-          Mention location, dates, and any relevant context that frames the work.
+          The Blessing of the Animals mural and mosaic created by Leo Politi from 1974–1978 are located in front of the Biscailuz building in the El Pueblo Historic Monument. The mural is acrylic executed on plaster and wood substrates. The mural was last treated by Zebala and Partners in 2015. Since the last treatment new damage has occurred, particularly along the base of the wall, where paint is blistering and flaking, most likely due to water splash-back from sidewalk cleaning. Some old cracks and losses are visible. The mural has accumulated surface grime, and the paint is beginning to lose its gloss.
         </p>
       </article>
 
       <!-- Image placeholder -->
       <figure class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
          w-full max-w-5xl mx-auto overflow-hidden">
-        <img class="w-full h-auto object-contain"  src="/olvera-st-3.JPEG" alt="jennifer payan standing in front of the Blessing of the animals mural">
+        <NuxtImg class="w-full h-auto object-contain" src="/images/blessings_animals/olvera-st-3.JPEG" alt="jennifer payan standing in front of the Blessing of the animals mural" format="webp" quality="80" sizes="sm:100vw md:800px" loading="lazy" />
       </figure>
 
       <!-- Section 1 -->
       <article class="prose prose-neutral dark:prose-invert max-w-none mt-8">
-        <h2>Research & Preparation</h2>
+        <h2>Condition of Mural & Mosaic</h2>
         <p>
-          [Placeholder] Describe preliminary research, assessment, and planning. Include methods,
-          stakeholders, and any standards followed (e.g., DACS, NAGPRA, AIC guidelines).
+          The Politi mural was damaged by graffiti and foodstuff in 2022. The maintenance staff used acetone solvent to remove graffiti from the goat figure and removed the foodstuff. The mural and mosaic were examined by Zebala & Partners on December 2, 2022.
         </p>
         <p>
-          [Placeholder] Note tools, materials, and workflows used. Capture challenges or constraints
-          and how you addressed them.
+          The examination found that the mural is in fair to good condition and the mosaic is in poor condition. Sections of the mural and the mosaic are exposed to direct sunlight streaming in through the arched porch. Sun exposure, salt migration from water, and vandalism have led to the following conditions:
         </p>
+        <ul class="list-disc pl-6 space-y-2 mt-4">
+          <li>Small losses in the paint layer.</li>
+          <li>Flaking and blistering paint in multiple locations.</li>
+          <li>Graffiti damage on the goat with a drip of red paint remaining.</li>
+          <li>Suspected area of overpaint that does not match the surrounding paint layer.</li>
+          <li>Foodstuff, drips, and accretions on the surface of the paint layer.</li>
+          <li>A heavy layer of dirt and grime on the surface, overall.</li>
+        </ul>
       </article>
 
       <!-- Image placeholder -->
       <figure class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
          w-full max-w-5xl mx-auto overflow-hidden">
-        <span class=" text-sm"><img class="w-full h-auto object-contain" src="/ovlvera-st-2.JPEG" alt=""></span>
+        <span class=" text-sm"><NuxtImg class="w-full h-auto object-contain" src="/images/blessings_animals/ovlvera-st-2.JPEG" alt="" format="webp" quality="80" sizes="sm:100vw md:800px" loading="lazy" /></span>
       </figure>
 
       <!-- Section 2 -->
@@ -81,7 +91,7 @@
       <!-- Image placeholder -->
       <figure class="mt-12 rounded-2xl border border-foreground/10 bg-foreground/5
          w-full max-w-5xl mx-auto overflow-hidden">
-        <span class="text-sm"><img class="w-full h-auto object-contain" src="/befora-after-olvera-st.png" alt="Before and after of the book section of the mural assigned to Jennifer"></span>
+        <span class="text-sm"><NuxtImg class="w-full h-auto object-contain" src="/images/blessings_animals/befora-after-olvera-st.png" alt="Before and after of the book section of the mural assigned to Jennifer" format="webp" quality="80" sizes="sm:100vw md:800px" loading="lazy" /></span>
       </figure>
 
       <!-- Section 3 -->
@@ -170,10 +180,10 @@ const slug = String(route.params.slug || '')
 const project = defaults[slug] ?? {
   slug,
   title: 'Blessing of the Animals Mural',
-  shortDescription: 'Cleaning up and repainting sections of the mural located at historic Olvera St in Downtown Los Angeles',
+  shortDescription: 'Conservation and condition assessment of the Leo Politi mural and mosaic (1974–1978) located at El Pueblo Historic Monument, Olvera Street.',
   hero: {
-    src: 'olvera-st-1.png',
-    alt: 'Replace with project hero image'
+    src: '/images/blessings_animals/olvera-st-1.png',
+    alt: 'Blessing of the Animals mural and mosaic by Leo Politi'
   }
 }
 </script>

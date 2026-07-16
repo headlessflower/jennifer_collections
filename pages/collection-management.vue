@@ -10,7 +10,7 @@
       </p>
       
       <div class="max-w-4xl mx-auto rounded-[32px] border border-brandDark/15 overflow-hidden shadow-md">
-        <img src="/ellsworth-2.png" alt="Collections Management Work" class="w-full h-auto object-cover" />
+        <NuxtImg src="/images/ellsworth/ellsworth-2.png" alt="Collections Management Work" class="w-full h-auto object-cover" format="webp" quality="80" sizes="sm:100vw md:896px" loading="eager" fetchpriority="high" />
       </div>
 
       <div class="pt-4">
@@ -53,7 +53,7 @@
               </p>
             </div>
             <div class="rounded-[20px] border border-brandDark/10 overflow-hidden shadow-sm">
-              <img src="/ellsworth-1.png" alt="Accessioning Work" class="w-full h-48 object-cover" />
+              <NuxtImg src="/images/ellsworth/ellsworth-1.png" alt="Accessioning Work" class="w-full h-48 object-cover" format="webp" quality="80" sizes="sm:100vw md:400px" loading="lazy" />
             </div>
           </div>
 
@@ -66,7 +66,7 @@
               </p>
             </div>
             <div class="rounded-[20px] border border-brandDark/10 overflow-hidden shadow-sm">
-              <img src="/ellsworth-3.png" alt="Database Support" class="w-full h-48 object-cover" />
+              <NuxtImg src="/images/ellsworth/ellsworth-3.png" alt="Database Support" class="w-full h-48 object-cover" format="webp" quality="80" sizes="sm:100vw md:400px" loading="lazy" />
             </div>
           </div>
 
@@ -79,7 +79,7 @@
               </p>
             </div>
             <div class="rounded-[20px] border border-brandDark/10 overflow-hidden shadow-sm">
-              <img src="/ellsworth-4.png" alt="Object Handling" class="w-full h-48 object-cover" />
+              <NuxtImg src="/images/ellsworth/ellsworth-4.png" alt="Object Handling" class="w-full h-48 object-cover" format="webp" quality="80" sizes="sm:100vw md:400px" loading="lazy" />
             </div>
           </div>
 
@@ -92,7 +92,7 @@
               </p>
             </div>
             <div class="rounded-[20px] border border-brandDark/10 overflow-hidden shadow-sm">
-              <img src="/ellsworth-5.png" alt="Loan Preparation" class="w-full h-48 object-cover" />
+              <NuxtImg src="/images/ellsworth/ellsworth-5.png" alt="Loan Preparation" class="w-full h-48 object-cover" format="webp" quality="80" sizes="sm:100vw md:400px" loading="lazy" />
             </div>
           </div>
         </div>

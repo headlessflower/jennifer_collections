@@ -12,10 +12,15 @@
                         workflows and documentation.
                     </p>
                 </div>
-                <img
-                    src="/ellsworth-3.png"
+                <NuxtImg
+                    src="/images/ellsworth/ellsworth-3.png"
                     alt="Workstation with scanners and archival drives"
                     class="w-full rounded-2xl shadow-lg"
+                    format="webp"
+                    quality="80"
+                    sizes="sm:100vw md:50vw lg:600px"
+                    loading="eager"
+                    fetchpriority="high"
                 />
             </div>
         </section>
