@@ -84,7 +84,7 @@ const projects: ProjectCard[] = [
     description:
         "Apprenticeship supporting historical research, condition assessment, and on-site conservation in East Los Angeles.",
     href: "/inner-resources-mural",
-    image: "/inner-resources.png",
+    image: "/images/inner_resources/inner-resources.png",
     imageAlt: "Detail of a public mural surface and conservation tools."
   },
   {

@@ -220,7 +220,7 @@ const project = defaults[slug] ?? {
     shortDescription:
         "Restoration and conservation of the Inner Resources Mural by Paul Botello located at City Terrace Park",
     hero: {
-        src: "/inner-resources.png",
+        src: "/images/inner_resources/inner-resources.png",
         alt: "Jennifer on scaffolding working on her section of the mural",
     },
 };

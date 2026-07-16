@@ -6,7 +6,7 @@
       <h2 class="text-3xl md:text-5xl font-serif text-brandDark leading-snug max-w-4xl mx-auto font-normal">
         Hey there! I'm
         <span class="inline-flex items-center align-middle mx-1">
-          <NuxtImg src="/headshot_2.webp" alt="Jennifer Payan"
+          <NuxtImg src="/images/headshot_2.webp" alt="Jennifer Payan"
             class="w-12 h-12 md:w-16 md:h-16 rounded-full border border-brandDark/15 object-cover shadow-sm" width="64"
             height="64" format="webp" loading="lazy" />
         </span>

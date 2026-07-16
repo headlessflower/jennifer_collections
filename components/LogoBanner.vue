@@ -39,7 +39,10 @@ const logos = [
   { src: '/logos/VC-Logo-Stacked-Black.png.webp', alt: 'Visual Communications' },
   { src: '/logos/Vincent_Price_Art_Museum_logo.png', alt: 'Vincent Price Art Museum' },
   { src: '/logos/ammpmagnet1.jpg.webp', alt: 'Academy Museum' },
-  { src: '/logos/lamag logo 1.png', alt: 'Los Angeles Municipal Art Gallery' }
+  { src: '/logos/chicano-logo.png', alt: 'UCLA Chicano Studies Research Center' },
+  { src: '/logos/county-arts-logo.png', alt: 'LA County Arts & Culture' },
+  { src: '/logos/ellsworth-logo.png', alt: 'Ellsworth Kelly Studio' },
+
 ]
 </script>
 

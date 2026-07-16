@@ -145,7 +145,7 @@ export const photographs: Photograph[] = [
     id: "inner-resources-assessment",
     title: "Mural Surface Documentation",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    imageUrl: "/inner-resources.png",
+    imageUrl: "/images/inner_resources/inner-resources.png",
     imageAlt: "Jennifer working on scaffolding in front of a colorful public mural",
     projectTitle: "“Inner Resources” Mural Conservation",
     projectUrl: "/inner-resources-mural",
@@ -238,6 +238,48 @@ export const photographs: Photograph[] = [
     role: "Conservationist",
     tags: ["Conservation", "Mural", "Public Art"],
     details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    id: "ellsworth-library-survey",
+    title: "Monograph Collection Survey",
+    description: "Initial condition assessment and inventorying of the Ellsworth Kelly Studio library monographs.",
+    imageUrl: "/images/ellsworth/ellsworth-1.png",
+    imageAlt: "Jennifer conducting catalog survey of monographs on white shelving units",
+    projectTitle: "Ellsworth Kelly Foundation Archivist",
+    projectUrl: "/ellsworth-kelly-foundation-archivist",
+    year: "2025",
+    location: "Spencertown, NY",
+    role: "Archivist Intern",
+    tags: ["Archives", "Library", "Ellsworth Kelly Studio", "Inventory"],
+    details: "Performing physical verification and barcode inventory tracking of monographs prior to metadata enhancement."
+  },
+  {
+    id: "olvera-mural-bench-treatment",
+    title: "Lower Bench Conservation Treatment",
+    description: "Consolidation and stabilization of the base plaster of the Olvera Street mural.",
+    imageUrl: "/images/blessings_animals/jennifer_olvera-street.JPG",
+    imageAlt: "Jennifer Payan examining the lower benches and base plaster of the mural",
+    projectTitle: "Blessing of the Animals Mural - Olvera St.",
+    projectUrl: "/blessing-animals-mural-olvera-street",
+    year: "2025",
+    location: "Los Angeles, CA",
+    role: "Conservationist",
+    tags: ["Conservation", "Mural", "Public Art", "Treatment"],
+    details: "Consolidating blistering and flaking paint layers at the wall base caused by microclimatic sidewalk splash-back."
+  },
+  {
+    id: "olvera-mural-initial-survey",
+    title: "Olvera Street Mural Condition Survey",
+    description: "General view documentation and assessment of the Blessing of the Animals mural before restoration.",
+    imageUrl: "/images/blessings_animals/olvera-st-1.png",
+    imageAlt: "Overview photograph of the Leo Politi mural at El Pueblo Historic Monument",
+    projectTitle: "Blessing of the Animals Mural - Olvera St.",
+    projectUrl: "/blessing-animals-mural-olvera-street",
+    year: "2025",
+    location: "Los Angeles, CA",
+    role: "Conservationist",
+    tags: ["Conservation", "Mural", "Public Art", "Documentation"],
+    details: "Mapping surface cracks, old restorations, and areas of paint blistering across the plaster facade."
   }
 ];
 
