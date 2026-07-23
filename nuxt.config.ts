@@ -10,8 +10,11 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxtjs/supabase",
     "nuxt-gtag",
-      "~/modules/nuxt-image-gallery-lightbox/src/module"
+    "~/modules/nuxt-image-gallery-lightbox/src/module"
   ],
+  gtag: {
+    id: "G-6GBPR9X5DP"
+  },
   tailwindcss: {
     exposeConfig: true,
     viewer: true,
